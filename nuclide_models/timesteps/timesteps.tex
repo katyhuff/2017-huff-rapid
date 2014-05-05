@@ -1,0 +1,116 @@
+\subsection{Time Stepping Algorithm}\label{sec:time stepping}
+
+In \Cyder, radionuclide contaminant flow travels outward from the central 
+Component. Mass balance is conducted in each Component at each time step. These 
+calculations proceed from the innermost Component to the outermost Component, 
+with mass transfer calculations conducted at the boundaries. As mass flows from 
+inner components to outer components, the mass balances in both components are 
+updated.  Thus, nuclide release information passes radially outward from the 
+waste stream sequentially through each containment layer to the geosphere.  This 
+implicit time stepping method arrives at the updated state of each Component, 
+radially outward, as a function of both the past state and the current state of 
+the system.  
+
+At each component interface where mass transfer occurs and within each component 
+where mass balances take place, the flow model is solved with the most up to 
+date information available.  To illustrate the algorithm by which mass flow 
+calculations are conducted through the system of components at each time step, 
+the phases of a single time step for a simple pair of components will be 
+described. For the remaining discussion, the source, $i$, is the inner and the 
+sink, $j$, is the outer component. 
+
+\subsubsection{Phase 1: Initial Conditions}
+
+The initial conditions in both the source and the sink at the beginning of a 
+time step are equal to the final updated state of the previous time step. On the 
+first time step, the global initial state of the repository system is used. 
+
+\subsubsection{Phase 2: Interior Mass Balance}
+
+The mass distribution ($m(\vec{r})$) and concentration profile in the interior source volume 
+$i$ is solved based on the initial condition, any influxes, and the physics of 
+its mass balance model.  This calculation results in a contaminant mass 
+distribution and concentration profile within the volume $i$ at time $t_n$.  
+For each of the models, the calculation behind this mass distribution and 
+concentration profile is discussed in Section \ref{sec:mass_balance}.
+
+This mass distribution and concentration profile fully inform 
+the conditions on the boundary at $r_i$ and this information is made available 
+to the external component, $j$.
+
+
+\subsubsection{Phase 3: Mass Transfer Calculation}
+
+The mass transfer from the source volume $i$ to the sink volume $j$ is 
+calculated next, based on the up to date conditions at $0\le r \le r_{i}$ 
+determined in Phase 2 and the initial conditions in volume $j$ where $r_i \le r 
+\le r_j$. The mass transfer is calculated according to the mass transfer mode 
+preference of the mass balance model of volume $j$.  
+
+The Degradation Rate and Mixed Cell models can be parameterized to utilize an 
+explicit mass transfer mode that captures either advection, dispersion, or 
+coupled flow.  The Lumped Parameter and One Dimensional PPM models, on the 
+other hand, use an implicit method by which the incoming mass flux is determined 
+based on the expected concentration profile resulting from the internal 
+Dirichlet boundary condition at $r_i$. 
+
+\subsubsection{Phase 4: Exterior Mass Balance}
+
+When a mass flux $m_{ij}(t_n)$ is determined between volumes $i$ and $j$, the 
+mass is added to the exterior sink volume $j$. Accordingly, necessary updates 
+are made to the mass balance and concentration profile as discussed in Section 
+\ref{sec:mass_balance}.
+
+\subsubsection{Phase 5: Interior Mass Balance Update}
+
+When a mass flux $m_{ij}(t_n)$ is determined between volumes $i$ and $j$, the 
+mass is simultaneously added to the exterior sink volume $j$ (as in phase 4) and 
+extracted from the interior source volume $i$.  When the material is extracted 
+from the interior source volume, the contained mass distribution and 
+concentration profile are updated to reflect this change,
+
+\begin{align}
+  m_{i}^*(t_n) &= m_i(t_n) - m_{ij}(t_n).
+\end{align}
+
+%\subsubsection{old text}
+%
+%That is, in Component $j$, some Component in a nested series, the mass flux 
+%entering the Component at time $t_n$ is found from the initial state of the cell 
+%at time $t_n$, the inner boundary 
+%condition at time $t_n$ and the outer boundary condition at $t_{n-1}$.  
+%
+%\begin{align}
+%  \dot{m}_{ij}^n &= f( m_j(t_{n-1}) , BC_i(t_n) , BC_j(t_{n-1}) . . . ) \nonumber\\
+%  \intertext{where}
+%  m_{ij}(t_n) &= \mbox{ contaminant mass flux from component i to j }[kg/time step]\nonumber\\
+%  BC_i(t_n)  &= \mbox{ inner conditions at }r_i\mbox{, and time }t_n \nonumber \\
+%  BC_j(t_{n-1})  &= \mbox{ outer conditions at }r_j\mbox{, and time }t_{n-1} \nonumber\\
+%  f &= \mbox{ functional form of contaminant transport into j. }\nonumber
+%\end{align}
+%
+%Once the mass flux into the component is found, the mass is removed from the 
+%inner cell, updating its state in preparation for the next time step.
+%
+%\begin{align}
+%  m_i^\dagger(t_n)  &= m_i(t_n)  - m_{ij}(t_n) 
+%  \intertext{where}
+%  m_i^\dagger(t_n)  &= \mbox{ updated mass in component i }[kg]
+%\end{align}
+%
+%In this way, the contained mass in the component is described as
+%\begin{align}
+%  m_j(t_n)  &= m_j(t_{n-1})  + \dot{m}_j(t_n) . \nonumber
+%\end{align}
+%
+%Resulting concentration profiles across the component can then be calculated 
+%and one can solve, numerically, for the outer boundary condition at $t_n$ 
+%
+%\begin{align}
+%  BC_j(t_n) &= g\left( m_j(t_n) , C_j(t_n) \right)\nonumber\\
+%  g &= \mbox{functional form of contaminant transport across j}\nonumber
+%\end{align}
+%
+%This boundary condition can, in turn, be used by the component external to it, $k$ as the $t_n$ 
+%inner boundary condition of its own solution and so on.
+%
