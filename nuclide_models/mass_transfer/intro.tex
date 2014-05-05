@@ -1,0 +1,61 @@
+The mass transfer interfaces between the mass balance models are essential to 
+the understanding of the \Cyder paradigm.  Depending on the mass balance model 
+selected in the external of two components, mass transfer into that component is 
+either explicit or implicit.  
+
+In the explicit mode, the mass transfer is chosen by the user among advective, dispersive, 
+coupled or fixed flux and is calculated based on the conditions at the transfer 
+boundary. The inventory in the components is then updated based on this transfer 
+rate. While all components enable this on their outer boundary, only the mass 
+balance models that are 0-dimensional in space (the Degradation Rate model and 
+the Mixed Cell model) require explicit transfer on their inner boundary.
+
+In the implicit mode, the mass balance model of the external component determines 
+the inventory based on boundary conditions provided by the internal component. 
+The appropriate mass is then transferred to accomplish the change in inventory.
+
+In groundwater transport, contaminants are transported by dispersion and 
+advection. It is customary to define the combination of molecular diffusion and 
+mechanical mixing as the dispersion tensor, $D$, such that, for a conservative 
+solute (infinitely soluble and non-sorbing), the mass conservation equation 
+becomes \cite{schwartz_fundamentals_2004, wang_introduction_1982, 
+van_genuchten_analytical_1982}:
+
+     \begin{align}
+      J &= J_{dis} + J_{adv}\nonumber
+      \intertext{where}
+      J_{dis} &= \mbox{ Total Dispersive Mass Flux }[kg/m^2/s]\nonumber\\
+      &= -\theta(D_{mdis} + \tau D_m)\nabla C \nonumber\\ 
+      &= -\theta D\nabla C \nonumber\\
+      J_{adv} &= \mbox{ Advective Mass Flux }[kg/m^2/s]\nonumber\\
+      &= \theta vC\nonumber\\
+      \tau &= \mbox{ Tortuosity }[-] \nonumber\\
+      \theta &= \mbox{ Porosity }[-] \nonumber\\
+      D_m &= \mbox{ Molecular diffusion coefficient }[m^2/s]\nonumber\\
+      D_{mdis} &= \mbox{ Coefficient of mechanical dispersivity}[m^2/s]\nonumber\\
+      D &= \mbox{ Effective Dispersion Coefficient }[m^2/s]\nonumber\\
+      C &= \mbox{ Concentration }[kg/m^3]\nonumber\\
+      v &= \mbox{ Fluid Velocity in the medium }[m/s].\nonumber
+    \end{align}
+
+For uniform flow in $\hat{k}$, 
+    \begin{align}
+      J &=\left(-\theta D_{xx} \frac{\partial C}{\partial x}
+             \right)\hat{\imath}
+             + \left( -\theta D_{yy} \frac{\partial C}{\partial y}
+            \right)\hat{\jmath}\nonumber\\
+            &+ \left( -\theta D_{zz} \frac{\partial C}{\partial z}
+             + \theta v_zC \right)\hat{k}.
+      \label{unidirflow}
+    \end{align}
+
+Solutions to this equation can be categorized by their boundary conditions.  
+Those boundary conditions serve as the interfaces between components in the 
+\Cyder library of nuclide transport models by way of advective, dispersive, 
+coupled, and fixed fluxes.  This is supported by implementation in which 
+vertical advective velocity is uniform throughout the system and in which 
+parameters such as the dispersion coefficient are known for each component. 
+
+
+
+

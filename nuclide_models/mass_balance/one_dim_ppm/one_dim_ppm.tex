@@ -1,0 +1,64 @@
+\subsubsection{One Dimensional Permeable Porous Medium Radionuclide Mass Balance 
+Model}\label{sec:one_dim_ppm}
+
+Various solutions to the advection dispersion equation  
+\eqref{unidirflow} have been published for both the first and third types of 
+boundary conditions. The third, Cauchy type, is more mass conservative, and is 
+the primary kind of boundary condition used at the source for the model 
+implementation in \Cyder.
+Abstraction results informed modifications to the implementation of an 
+analytic solution to the one dimensional advection-dispersion equation with 
+a finite domain and Cauchy and Neumann boundary conditions at the inner and outer 
+boundaries, respectively. 
+
+The conceptual model in Figure \ref{fig:1dinf} represents solute transport in 
+one dimension with unidirectional flow upward (a conservative assumption) and a 
+finite boundary condition in the positive flow direction. 
+In \Cyclus, radioactive decay is handled external to the components, so there is 
+no need to include production or decay.  An approximate solution for these conditions  
+made by Brenner \cite{brenner_diffusion_1962} is described below as 
+it is given in van Genuchten et. al, \cite{van_genuchten_analytical_1982}, 
+
+\begin{figure}[h!]
+  \begin{center}
+    \def\svgwidth{\columnwidth}
+    \input{./nuclide_models/mass_balance/one_dim_ppm/1dfin.eps_tex}
+  \end{center}
+  \caption[1D finite advection dispersion solution.]{A one dimensional, 
+  finite, unidirectional flow solution with Cauchy and Neumann boundary 
+conditions}
+  \label{fig:1dinf}
+\end{figure}
+
+For the boundary conditions, 
+\begin{align}
+  -D \frac{\partial C}{\partial z}\big|_{z=0} + v_zc &= \begin{cases}
+    v_zC_0  &  \left( 0<t<t_0 \right)\\
+    0  &  \left( t>t_0 \right)\\
+  \end{cases}
+\intertext{and}
+  \frac{\partial C}{\partial z}\big|_{z=L} &= 0
+  \intertext{and the initial condition,}
+  C(z,0) &= C_i,
+  \label{1dinfBC}
+  \intertext{the solution is given as }
+  C(z,t) &= \begin{cases} 
+  C_i + \left(C_0 - C_i\right)A\left(z,t\right) & 0<t\le t_0\\
+  C_i + \left(C_0 - C_i\right)A\left(z,t\right) - C_0A(z,t-t_0) & t\ge t_0.
+  \end{cases}
+\end{align}
+
+For the vertical flow coordinate system, $A$ is defined as
+\begin{align}
+A(z,t) =& \left(\frac{1}{2}\right)\erfc{\left[\frac{Rz-vt}{2\sqrt{DRt}}\right]} \nonumber\\
+&+ \left(\frac{v^2t}{\pi RD}\right)^{1/2}\exp{\left[-\frac{(Rz-vt)^2}{4DRt}\right]}\nonumber\\ 
+&- \frac{1}{2} \left(1+\frac{vz}{D} + \frac{v^2t}{DR}\right) \exp{\left[\frac{vz}{D}\right]}\erfc{\left[\frac{Rz+vt}{2\sqrt{DRt}}\right]}\nonumber\\
+&+ \left(\frac{4v^2t}{\pi RD}\right)^{1/2}\left[1+\frac{v}{4D}\left(2L-z+\frac{vt}{R}\right)\right]\exp{\left[\frac{vL}{D} - \frac{R}{4Dt}\left(2L-z+\frac{vt}{R}\right)^2\right]}\nonumber\\
+&- \frac{v}{D}\left[2L - z + \frac{3vt}{2R} + \frac{v}{4D}\left(2L - z + \frac{vt}{R}\right)^2\right]\exp{\left[\frac{vL}{D}\right]}\erfc{\left[\frac{R(2L-z) + vt}{2\sqrt{DRt}}\right]}
+\label{simple_genuchten}
+\intertext{where}
+L =& \mbox{Extent of the solution domain }[m]\nonumber\\
+R =& \mbox{Retardation factor }[-].\nonumber
+\end{align}
+
+

@@ -1,0 +1,63 @@
+\subsubsection{Explicit Dispersion Dominated Mass Transfer}\label{sec:diff_mass_transfer}
+
+
+The second type, specified dispersive flux, or Neumann type boundary conditions describe a full set of 
+concentration gradients at the boundary of the domain,
+    \begin{align}
+      \frac{\partial C(\vec{r},t)}{\partial r}\Big|_{\vec{r}\in\Gamma} &= f(t)\\
+      f(t) &= \mbox{ known function }.\nonumber
+    \end{align}
+
+The Neumann boundary condition can be provided at the external boundary of any 
+mass balance model,
+\begin{align}
+\frac{\partial C}{\partial z}\Bigg|_{z=r_j} &= \mbox{ fixed concentration gradient in j at }r_j\mbox{ and } t_n [kg/m^3/s].\nonumber
+\end{align}
+
+
+For mass balance models that are 0-dimensional in space (i.e. the Degradation 
+Rate model and the Mixed Cell model), which lack spatial variation in the 
+concetration profile, the differential must be approximated. Taking the 
+center-to-center difference between adjacent components is one convenient way 
+to make this approximation, and is the method implemented in \Cyder, such that 
+
+\begin{align}
+\frac{\partial C(z,t_n)}{\partial z}\Bigg|_{z=r_j} &= \frac{C_k(r_{k-1/2},t_{n-1}) - C_j(r_{j-1/2}, t_n)}{r_{k-1/2} - r_{j-1/2}}
+\intertext{where}
+r_{j-1/2} &= r_{j} - \frac{r_{j} - r_i}{2}\nonumber\\
+r_{k-1/2} &= r_{k} - \frac{r_{k} - r_j}{2}.\nonumber
+\end{align}
+
+However, for mass balance models that are 1-dimensional in space (i.e. the 
+Lumped Parameter model and the One Dimensional PPM model), the derivative is 
+taken based on the concentration profile in the internal component as it 
+approaches the boundary.  In component $j$, if it is a lumped parameter model, 
+the profile is assumed to be a linear relationship between $C_{in}$ and 
+$C_{out}$, the gradient is
+
+\begin{align} 
+\frac{\partial C(z,t_n)}{\partial z}\Bigg|_{r_i\le z\le j} &= \frac{C_{out} - C_{in}}{r_{j} - r_{i}}.
+\end{align}
+
+For the one dimensional permeable porous medium model, the analytical 
+derivative of equation \eqref{simple_genuchten} is evaluated at $r_j$.
+
+%\begin{align}
+%derivative..
+%\end{align}
+
+For mass transfer into the Degradation Rate and Mixed Cell models, the Neumann 
+boundary condition can be chosen to enforce a dispersive flux on the inner 
+boundary. This choice is appropriate when the user expects a primarily 
+dispersive flow across the boundary. The dispersive flux in one dimension, 
+\begin{align}
+      J_{dis} &= \mbox{ Total Dispersive Mass Flux }[kg/m^2/s]\nonumber\\
+      &= -\theta D\frac{\partial C}{\partial z} \nonumber
+\end{align}
+relies on the fixed gradient Neumann boundary condition at the interface. 
+The resulting mass transfer into the Degradation Rate or Mixed Cell model is, 
+therefore, 
+
+\begin{align}
+m_{jk}(t_n) &= - A\Delta t \theta_k D \frac{\partial C(z,t_n)}{\partial z}|_{z=r_j}.
+\end{align}
