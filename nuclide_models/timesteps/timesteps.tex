@@ -45,15 +45,9 @@ The mass transfer from the source volume $i$ to the sink volume $j$ is
 calculated next, based on the up to date conditions in volume $i$ (where $0\le r \le r_i$) 
 determined in Phase 2 and the initial conditions in volume $j$ (where $r_i \le 
 r \le r_j$). The mass transfer is calculated according to the mass transfer mode 
-preference of the mass balance model of volume $j$.  
+preference of the mass balance model of volume $j$, as discussed in Section 
+\ref{sec:mass_transfer}. 
 
-%The Degradation Rate and Mixed Cell
-Two of the mass balance models (Degradation Rate and Mixed Cell) can be 
-parameterized to utilize an explicit mass transfer mode that captures either 
-advection, dispersion, or coupled flow.  The other two (Lumped Parameter and 
-One Dimensional PPM) models use an implicit method by which the incoming mass 
-flux is determined based on the expected concentration profile resulting from 
-the internal Dirichlet boundary condition at $r_i$. 
 
 \subsubsection{Phase 4: Exterior Mass Balance}
 
