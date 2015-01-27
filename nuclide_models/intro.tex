@@ -1,13 +1,21 @@
-\Cyder conducts radionuclide contaminant transport to determine the 
+\Cyder conducts radionuclide contaminant transport through a generic geologic 
+repository concept to determine the 
 contaminants expected to reach the environment. This key calculation 
 informs repository performance assesment metrics related to containment and 
 environmental impact.
 
-To acheive this, \Cyder models engineered and natural 
-containment barriers as distinct control volumes. These `Components' are 
-connected by mass transfer interfaces that approximate mass transfer based on 
-the mass inventory and distribution within adjacent Components. Mass inventory 
-is a simple sum of in and out flows while mass distribution within the 
-Component is determined by the dominant physics of the mass balance model selected 
-for that volume.  
+To acheive this, \Cyder models engineered and natural containment barriers as 
+distinct control volumes. These \emph{components} are arranged in a regular 
+grid at a single vertical depth within a geologic component. Adjacent 
+components share mass transfer interfaces. Mass transfer between them is based 
+on the mass inventory and distribution within adjacent components. Mass 
+inventory is a simple sum of in and out flows while mass distribution within 
+the Component is determined by the dominant physics of the mass balance model 
+selected for that volume.
 
+In \Cyder, the mass transfer and mass balance solution follows an implicit 
+\emph{time stepping algorithm}. The solution behavior is determined by selecting 
+among \emph{mass transfer modes} at component boundaries and selecting among 
+\emph{mass balance models} within the components. This section will describe 
+the mathematics behind these three aspects of the \Cyder paradigm, beginning 
+with the phases of the time stepping algorithm.
