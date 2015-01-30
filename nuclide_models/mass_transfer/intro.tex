@@ -3,8 +3,9 @@ the understanding of the \Cyder paradigm.  Depending on the mass balance model
 selected in the external of two components, mass transfer into that component is 
 either explicit or implicit.  
 
-In the explicit mode, the mass transfer mode is chosen by the user among advective, dispersive, 
-coupled or fixed flux and is calculated based on the conditions at the transfer 
+In the explicit mode, the mass transfer mode is chosen by the user. Available 
+options include  advective, dispersive, 
+coupled, or fixed flux. The correspon calculated based on the conditions at the transfer 
 boundary. The inventory in the components is then updated based on this transfer 
 rate. While all components enable this on their outer boundary, only the mass 
 balance models that are 0-dimensional in space (the Degradation Rate model and 
@@ -15,26 +16,41 @@ the inventory based on boundary conditions provided by the internal component.
 The appropriate mass is then transferred to accomplish the change in inventory.
 
 In groundwater transport, contaminants are transported by dispersion and 
-advection. It is customary to define the combination of molecular diffusion and 
-mechanical mixing as the dispersion tensor, $D$, such that, for a conservative 
-solute (infinitely soluble and non-sorbing), the mass conservation equation 
+advection such that the mass conservation equationfor mass flux
 becomes \cite{schwartz_fundamentals_2004, wang_introduction_1982, 
 van_genuchten_analytical_1982}:
 
      \begin{align}
-      J &= J_{dis} + J_{adv}\nonumber
+      J &= J_{dis} + J_{adv}
       \intertext{where}
       J_{dis} &= \mbox{ Total Dispersive Mass Flux }[kg/m^2/s]\nonumber\\
+      J_{adv} &= \mbox{ Advective Mass Flux }[kg/m^2/s].\nonumber
+      \end{align}
+
+It is customary to define the combination of molecular diffusion and 
+mechanical mixing as the dispersion tensor, $D$, such that, for a conservative 
+solute (infinitely soluble and non-sorbing), so that the dispersive component 
+can be described in terms of the concentration profile: 
+
+    \begin{align}
+      J_{dis} &= \mbox{ Total Dispersive Mass Flux }[kg/m^2/s]\nonumber\\
       &= -\theta(D_{mdis} + \tau D_m)\nabla C \nonumber\\ 
-      &= -\theta D\nabla C \nonumber\\
-      J_{adv} &= \mbox{ Advective Mass Flux }[kg/m^2/s]\nonumber\\
-      &= \theta vC\nonumber\\
+      &= -\theta D\nabla C \nonumber
+      \intertext{where}
       \tau &= \mbox{ Tortuosity }[-] \nonumber\\
-      \theta &= \mbox{ Porosity }[-] \nonumber\\
+      &= \theta vC\nonumber\\
       D_m &= \mbox{ Molecular diffusion coefficient }[m^2/s]\nonumber\\
       D_{mdis} &= \mbox{ Coefficient of mechanical dispersivity}[m^2/s]\nonumber\\
+      C &= \mbox{ Concentration }[kg/m^3]\nonumber
+    \end{align}
+
+Meanwhile, the advective mass flux depends on the concentration, the porosity 
+of the medium, and the fluid velocity in that medium, 
+
+    \begin{align}
+      J_{adv} &= \mbox{ Advective Mass Flux }[kg/m^2/s]\nonumber\\
+      \theta &= \mbox{ Porosity }[-] \nonumber\\
       D &= \mbox{ Effective Dispersion Coefficient }[m^2/s]\nonumber\\
-      C &= \mbox{ Concentration }[kg/m^3]\nonumber\\
       v &= \mbox{ Fluid Velocity in the medium }[m/s].\nonumber
     \end{align}
 
