@@ -6,26 +6,8 @@
 \input{./nuclide_models/mass_transfer/dis}
 %\subsubsection{Coupled Advective Dispersive Mass Transfer}\label{sec:adv_dis_mass_transfer}
 \input{./nuclide_models/mass_transfer/adv_dis}
-
-\subsubsection{Explicit Maximum Flow Mass Transfer}\label{sed:max_flow_mass_transfer}
-
-For debugging and testing purposes, the maximum flow mode transports all 
-available material in a component into the component external to it. 
-
-The total available mass for each mass balance model can be expressed,
-\begin{align}
-m_{jk}(t_n) &= \begin{cases}
-                         m_{j,d}(t_n), & \mbox{Degradation Rate}\\
-                         m_{j,df}(t_n), & \mbox{Mixed Cell}\\
-                         \int C(z,t_n)dV_j, & \mbox{Lumped Parameter}\\
-                         \int C(z,t_n)dV_j, & \mbox{One Dimensional PPM}.
-               \end{cases}
-\end{align}
-
-The integrals for the Lumped Parameter model and the One Dimensional PPM model 
-are calculated numerically.
-
-
+%\subsubsection{Explicit, Maximum-Flow Mass Transfer}label{sec:max_flow_mass_transfer}
+\input{./nuclide_models/mass_transfer/max_flow}
 %\subsubsection{Implicit Mass Transfer}\label{sec:implicit_mass_transfer}
 \input{./nuclide_models/mass_transfer/implicit}
 
