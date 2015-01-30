@@ -31,17 +31,15 @@ In the Degradation Rate and Mixed Cell models, the Dirichlet boundary condition 
 be chosen to enforce an advective flux on the inner boundary. This choice is 
 appropriate when the user expects a primarily advective interface between two 
 components. The advective flux across the boundary between two components $j$ 
-and $k$, 
+and $k$, relies on the fixed concentration Dirichlet boundary condition at the 
+interface, provided by the internal component, thus
 
 \begin{align}
 J_{adv}(t_n) &= \mbox{ potential advective flux at }t_n[kg/m^2/s]\nonumber\\
-               &= \theta v C(z,t_n)
+               &= \theta v C(z,t_n).
 \end{align}
-relies on the fixed concentration Dirichlet boundary condition at the 
-interface, provided by the internal component.
 
-The resulting mass transfer into the Degradation Rate or Mixed Cell model
-is, therefore, 
+The resulting mass transfer into the component is, therefore, 
 \begin{align}
 m_{jk}(t_n) &= A\Delta t \theta_k v C(z,t_n)|_{z=r_j}
 \intertext{where}
