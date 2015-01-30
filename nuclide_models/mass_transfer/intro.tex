@@ -37,11 +37,12 @@ can be described in terms of the concentration profile:
       &= -\theta(D_{mdis} + \tau D_m)\nabla C \nonumber\\ 
       &= -\theta D\nabla C \nonumber
       \intertext{where}
+      \theta &= \mbox{ Porosity }[-] \nonumber\\
       \tau &= \mbox{ Tortuosity }[-] \nonumber\\
-      &= \theta vC\nonumber\\
+      C &= \mbox{ Concentration }[kg/m^3]\nonumber\\
       D_m &= \mbox{ Molecular diffusion coefficient }[m^2/s]\nonumber\\
       D_{mdis} &= \mbox{ Coefficient of mechanical dispersivity}[m^2/s]\nonumber\\
-      C &= \mbox{ Concentration }[kg/m^3]\nonumber
+      D &= \mbox{ Effective Dispersion Coefficient }[m^2/s].\nonumber
     \end{align}
 
 Meanwhile, the advective mass flux depends on the concentration, the porosity 
@@ -49,8 +50,7 @@ of the medium, and the fluid velocity in that medium,
 
     \begin{align}
       J_{adv} &= \mbox{ Advective Mass Flux }[kg/m^2/s]\nonumber\\
-      \theta &= \mbox{ Porosity }[-] \nonumber\\
-      D &= \mbox{ Effective Dispersion Coefficient }[m^2/s]\nonumber\\
+      &= \theta vC\nonumber\\
       v &= \mbox{ Fluid Velocity in the medium }[m/s].\nonumber
     \end{align}
 
