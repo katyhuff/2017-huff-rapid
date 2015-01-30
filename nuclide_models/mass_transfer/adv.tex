@@ -1,4 +1,4 @@
-\subsubsection{Explicit Advection Dominated Mass Transfer}\label{sec:adv_mass_transfer}
+\subsubsection{Explicit, Advection-Dominated Mass Transfer}\label{sec:adv_mass_transfer}
 
 Specified-concentration, or Dirichlet type, boundary conditions define 
 a specified species concentration on some section of the boundary of the 
@@ -13,7 +13,9 @@ representative volume,
 
 The right hand side of the Dirichlet boundary condition can be provided by any 
 mass balance model, $j$, at its external boundary, $r_j$, based on the 
-concentration profile it calculates (see Section \ref{sec:mass_balance}),
+concentration profile it calculates (see Section \ref{sec:mass_balance}). The 
+resulting concentration profile depends on the mass balance model chosen to 
+represent that component,
 
 \begin{align}
 C(z,t_n)|_{z=r_j} &= \mbox{ fixed concentration in j at }r_j\mbox{ and }t_n [kg/m^3].\nonumber\\ 
