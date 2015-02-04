@@ -5,10 +5,29 @@ lack coupled repository performance analysis capabilities.  The computational
 burden of robust repository performance analysis has previously not been 
 compatible with fuel cycle simulation \cite{huff_functions_2011}.
 
-The \Cyder software library and its radionuclide contaminant transport models 
-were  developed to fill this capability gap \cite{huff_cyder_2013}. 
-To enable dynamic analysis of waste metrics, \Cyder provides medium fidelity 
+The \Cyder software library \cite{huff_cyder_2013} and its radionuclide 
+contaminant transport models were  developed to fill this capability gap.  To 
+enable dynamic analysis of waste metrics, \Cyder provides medium fidelity 
 models to conduct repository performance analysis on efficient timescales 
-appropriate for fuel cycle analyses.
+appropriate for fuel cycle analyses. It has been implemented as a Facility 
+for version 0.3 of the \Cyclus framework \cite{wilson_cyclus_2013}, but can 
+also be used as a standalone library.
 
-TODO: Literature review paragraph.
+
+Most current tools treat the waste disposal
+phase of fuel cycle analysis statically in post processing by reporting
+values such as mass, volumes, radiotoxicity, or heat production of accumulated
+\gls{SNF} and \gls{HLW}. Such tools
+(e.g.,
+\gls{NUWASTE} \cite{abkowitz_nuclear_2010},
+\gls{DANESS} \cite{van_den_durpel_daness:_2006},
+\gls{NFCSim} \cite{schneider_nfcsim_2004}, and
+ORION \cite{gregg_orion_2011})
+fail to address the impact of those waste streams on the performance of the
+geologic disposal system \cite{wilson_comparing_2011}.  Two tools, \gls{COSI}
+\cite{boucher_international_2010} and \gls{VISION} \cite{yacout_vision_2006,
+wilson_comparing_2011, radel_repository_2007, boucher_international_2010},
+dynamically perform heat based capacity calculations.
+However, those calculations are applicable only for specific
+repository concepts and cannot inform sensitivity to alternate geologic disposal
+system characteristics.
