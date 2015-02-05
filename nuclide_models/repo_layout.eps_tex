@@ -49,6 +49,6 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,1.3735205)%
-    \put(0,0){\includegraphics[width=\unitlength]{./nuclide_models/timesteps/repo_layout.eps}}%
+    \put(0,0){\includegraphics[width=\unitlength]{./nuclide_models/repo_layout.eps}}%
   \end{picture}%
 \endgroup%
