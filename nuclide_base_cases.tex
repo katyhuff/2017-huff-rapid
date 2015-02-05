@@ -1,0 +1,54 @@
+%Also, for most of 5.2, you need to make the case that the single result you show 
+%is representative!!  I think that's easy, but needs to be done.  Essentially, 
+%you need to make the case that for real isotopes, the same model will be 
+%invoked with real parameters, so that these normalized (relative?) parameters 
+%are representative of all cases.
+In the following base cases, basic transport behavior for aphysical 
+parameterizations demonstrate the successful collective behavior of the modular 
+components in a \Cyder repository.
+
+\subsection{Basic Transport and Containment Problem Specification}
+
+Basic transport and containment base cases were conducted to verify the 
+fundamental behavior of all the radionuclide transport models at each component 
+interface. These integration tests neglected thermal transport and capacity 
+estimation to simplify the results.
+
+The problem design includes the following : 
+\begin{itemize}
+\item{A source facility providing one waste stream per time step}
+\item{An initial capacity of five 1 kg waste streams (in most cases)}
+\item{Waste form Components each accepting 1 waste stream} 
+\item{Corresponding waste package Components, one per waste form}
+\item{A buffer Component}
+\item{A far field Component}
+\end{itemize}
+
+This simulation is run for 1000 years.
+
+\subsubsection{Mixed Cell Model}
+The Mixed Cell model behaves similarly to the Degradation Rate model when 
+sorption and solubility limitation in that model are disabled. When they are 
+enabled, however, the system is expected to demonstrate sorption limited and 
+solubility limited transport as in Figures \ref{fig:mcIIIall} through 
+\ref{fig:mcII}. The extent to which sorption and solubility limitation meet 
+expectations is addressed in this base case.
+
+\input{./mc_base_fig}
+
+Dual and single parameter verification cases were run to explore the effects of 
+sorption and solubility limitation both separately and together.  Results from 
+two of these base cases can be found in Figures \ref{fig:mcI} through 
+\ref{fig:mcII}.
+The fixed maximum transport mode was use between mixed cell components for speed 
+and clarity of results.
+
+In the two following simulations, a waste form with 1 kg is introduced to the repository once 
+per time step for the first five time steps. Those five waste packages are 
+placed into a single buffer component, which is contained by a single far field 
+component. All are represented by the Mixed Cell Model. Each component except 
+the far field has a degradation rate of 0.1 per time step.
+
+
+\FloatBarrier
+
