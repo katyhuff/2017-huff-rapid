@@ -1,11 +1,11 @@
 \section{Introduction}\label{sec:introduction}
-Repository performance metrics provide an important basis for comparison among 
-potential nuclear fuel cycles. 
-However, the computational 
-burden of robust repository performance analysis has previously not been 
+Repository performance metrics provide an important basis for comparison among
+potential nuclear fuel cycles.
+However, the computational
+burden of robust repository performance analysis has previously not been
 compatible with fuel cycle simulation.
-Therefore, current nuclear fuel cycle simulators 
-lack coupled repository performance analysis capabilities.  
+Therefore, current nuclear fuel cycle simulators
+lack coupled repository performance analysis capabilities.
 
 Most current tools treat the waste disposal
 phase of fuel cycle analysis statically in post processing by reporting
@@ -25,11 +25,21 @@ However, those calculations are applicable only for specific
 repository concepts and cannot inform sensitivity to alternate geologic disposal
 system characteristics.
 
-The \Cyder software library \cite{huff_cyder_2013} and its radionuclide 
-contaminant transport models were  developed to fill this capability gap.  To 
-enable dynamic analysis of waste metrics, \Cyder provides medium fidelity 
-models to conduct repository performance analysis on efficient timescales 
-appropriate for fuel cycle analyses. It has been implemented as a Facility 
-compatible with version 0.3 of the \Cyclus framework \cite{wilson_cyclus:_2012}, but can 
+The \Cyder software library \cite{huff_cyder_2013} and its radionuclide
+contaminant transport models were  developed to fill this capability gap.  To
+enable dynamic analysis of waste metrics, \Cyder provides medium fidelity
+models to conduct repository performance analysis on efficient timescales
+appropriate for fuel cycle analyses. It has been implemented as a Facility
+compatible with version 0.3 of the \Cyclus framework \cite{wilson_cyclus:_2012}, but can
 also be used as a standalone library.
+The \Cyder framework and its radionuclide transport models appear in Sections
+\ref{sec:} and \ref{sec:} respectively.
+
+Parametric demonstration simulations performed with \Cyder were also conducted
+within \Cyclus for verification purposes. Those results are presented in
+Section \ref{sec:} and compared to parametric simulations with the a more
+detailed computational model, the Clay \gls{GDSM}, which was developed by the
+DOE-NE Used Fuel Disposition Campaign \cite{clayton_generic_2011} and relies on
+the GoldSim simulation environment \cite{golder_associates_goldsim_2010-1} and
+contaminant transport module \cite{golder_associates_goldsim_2010-1}.
 
