@@ -1,10 +1,22 @@
 \section{Results and Discussion}
+\label{sec:results}
 
+Many numerical experiments were conducted to validate the \Cyder software library.
 In multiple multi-component simulations, expected transport behavior for aphysical
 parameterizations demonstrated the successful collective behavior of the modular
-components in a \Cyder repository.  Additionally, multiple single parameter
-sensitivity analyses were conducted to demonstrate expected single-effect model
-behavior.
+components in a \Cyder repository. Additionally, single-parameter sensitivity
+analyses were conducted to demonstrate expected model behavior for various
+aspects of the specific physics captured by the models.  The results achieved
+with \Cyder and \Cyclus were compared to results reported in
+\cite{huff_key_2012} from a more detailed existing model.
+
+That
+analysis was conducted with a more detailed radionuclide transport model,
+the Clay \gls{GDSM} which was developed by the \gls{UFD} Campaign within the
+\gls{DOE} Office of Nuclear Energy.
+
+In addition to these numerical experiments, a robust unit test suite was
+deployed during development to verify \Cyder software implementation.
 
 \subsection{Multi-component Simulations}
 % Many numerical experiments were conducted to verify and validate this code.
@@ -14,12 +26,12 @@ behavior.
 \input{nuclide_base_cases}
 
 \subsection{Single Effect Parametric Analyses}
-% Many parametric analysis were conducted to validate system responses 
+% Many parametric analysis were conducted to validate system responses
 \input{sol_results}
 
 \FloatBarrier
 \subsection{Significance}
-% The existence of this code enables dynamic analysis of repository performance 
+% The existence of this code enables dynamic analysis of repository performance
 % during fuel cycle simulation.
 
 This work has provided a flexible code for rapid medium fidelity calculation
@@ -45,7 +57,7 @@ documentation is also available online \cite{huff_cyder_2013}.
 
 The application programming interface to this software library is intentionally
 general, facilitating the incorporation of the models presented here within
-external software tools in need of a multicomponent disposal system simulator.  
+external software tools in need of a multicomponent disposal system simulator.
 
 Furthermore, this work contributes to an expanding ecosystem of computational
 models available for use with the Cyclus fuel cycle simulator. This hydrologic
