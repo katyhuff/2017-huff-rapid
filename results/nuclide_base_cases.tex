@@ -1,0 +1,39 @@
+%Also, for most of 5.2, you need to make the case that the single result you show
+%is representative!!  I think that's easy, but needs to be done.  Essentially,
+%you need to make the case that for real isotopes, the same model will be
+%invoked with real parameters, so that these normalized (relative?) parameters
+%are representative of all cases.
+
+To verify the fundamental behavior of all four \Cyder radionuclide transport models at
+each component interface, many transport and containment base cases were
+conducted.
+
+The simulations were conducted within the \Cyclus framework and had the
+following global parameters:
+
+\begin{itemize}
+\item{A 1000 year simulation}
+\item{A source facility providing one waste stream per time step}
+\item{An initial capacity of five 1 kg waste streams (in most cases)}
+\item{Waste form Components each accepting 1 waste stream}
+\item{Corresponding waste package Components, one per waste form}
+\item{A buffer Component}
+\item{A far field Component}
+
+\end{itemize}
+
+
+Each feasible combination of the four models was conducted to verify
+implementation of the time stepping algorithm and transport modes between
+components. Among these simulations, one in which each component is represented with a Mixed
+Cell model is shown in \ref{fig:mcIIall} through \ref{fig:mcII}.  Solubility
+limitation is enabled in this case, so the system is expected to demonstrate
+solubility limited transport.  To simultaneously demonstrate the behavior of
+the solubility limitation, no sorption is applied, but solubility limitation is
+set to 0.001 kg/m$^3$ for all isotopes.  The fixed maximum transport mode was
+use between mixed cell components for speed and clarity of results.
+
+\input{./results/mc_base_fig}
+
+\FloatBarrier
+

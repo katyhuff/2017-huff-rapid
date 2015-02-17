@@ -2,18 +2,13 @@
 \label{sec:results}
 
 Many numerical experiments were conducted to validate the \Cyder software library.
-In multiple multi-component simulations, expected transport behavior for aphysical
-parameterizations demonstrated the successful collective behavior of the modular
-components in a \Cyder repository. Additionally, single-parameter sensitivity
-analyses were conducted to demonstrate expected model behavior for various
-aspects of the specific physics captured by the models.  The results achieved
-with \Cyder and \Cyclus were compared to results reported in
-\cite{huff_key_2012} from a more detailed existing model.
-
-That
-analysis was conducted with a more detailed radionuclide transport model,
-the Clay \gls{GDSM} which was developed by the \gls{UFD} Campaign within the
-\gls{DOE} Office of Nuclear Energy.
+Multi-component simulations demonstrated expected transport behavior and
+the successful collective interaction of the modular
+components in a \Cyder repository. Single-parameter sensitivity analyses
+demonstrated that physics captured by the \Cyder models compare favorably to
+results reported in \cite{huff_key_2012} from a more detailed existing model,
+the Clay \gls{GDSM}, developed by the \gls{UFD} Campaign within the
+\gls{DOE} Office of Nuclear Energy \cite{clayton_generic_2011}.
 
 In addition to these numerical experiments, a robust unit test suite was
 deployed during development to verify \Cyder software implementation.
@@ -23,12 +18,18 @@ deployed during development to verify \Cyder software implementation.
 
 % The interaction between components is demonstrated by an example simulation
 
-\input{nuclide_base_cases}
+\input{./results/nuclide_base_cases}
 
 \subsection{Single Effect Parametric Analyses}
 % Many parametric analysis were conducted to validate system responses
-\input{sol_results}
-
+\subsubsection{Solubility Sensitivity}
+\input{./results/sol_results}
+\FloatBarrier
+\subsubsection{Sorption Sensitivity}
+\input{./results/kd}
+\FloatBarrier
+\subsubsection{Waste Form Degradation Rate Sensitivity}
+\input{./results/wf_deg_inv}
 \FloatBarrier
 \subsection{Significance}
 % The existence of this code enables dynamic analysis of repository performance
