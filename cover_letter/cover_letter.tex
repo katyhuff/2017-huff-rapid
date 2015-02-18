@@ -1,0 +1,99 @@
+% Plain Cover Letter
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%       PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{letter} % Default font size of the document, change to 10pt to fit more text
+\usepackage{graphicx}
+%\usepackage{newcent} % Default font is the New Century Schoolbook PostScript font
+%\usepackage{helvet} % Uncomment this (while commenting the above line) to use the Helvetica font
+
+% Margins
+\topmargin=-1in % Moves the top of the document 1 inch above the default
+\textheight=10in % Total height of the text on the page before text goes on to the next page, this can be increased in a longer letter
+%\oddsidemargin=-10pt % Position of the left margin, can be negative or positive if you want more or less room
+%\textwidth=6.5in % Total width of the text, increase this if the left margin was decreased and vice-versa
+
+%\let\raggedleft\raggedright % Pushes the date (at the top) to the left, comment this line to have the date on the right
+\documentclass{article}
+%\usepackage{wallpaper}
+%\ULCornerWallPaper{0.97}{bk_logo.eps}
+
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%       ADDRESSEE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{letter}{Y.Y. Azmy, M.Joyce, and G.H. Su\\
+Editors\\
+Progress in Nuclear Energy}
+
+%----------------------------------------------------------------------------------------
+%       YOUR NAME & ADDRESS SECTION
+%----------------------------------------------------------------------------------------
+
+\vspace{-2cm}
+\begin{center}
+\includegraphics[width=\textwidth]{bk_logo.eps}
+\end{center}
+
+\address{Department of Nuclear Engineering\\
+4155 Etcheverry Hall\\
+MC 1730\\
+University of California, Berkeley\\
+Berkeley, CA 94720-1730}
+
+\name{\vspace{5mm}
+Kathryn Huff\\
+Postdoctoral Scholar\\
+huff@berkeley.edu}
+
+%----------------------------------------------------------------------------------------
+%       LETTER CONTENT SECTION
+%----------------------------------------------------------------------------------------
+
+\opening{Dear Professors Azmy, Joyce, and Su:}
+
+Please find enclosed a manuscript entitled: ``Rapid Methods for Radionuclide
+Contaminant Transport in Nuclear Fuel Cycle Simulation'' which I am submitting
+for exclusive consideration of publication as a research article in Progress in
+Nuclear Energy.
+
+This manuscript describes the hydrologic contaminant transport methods
+implemented in Cyder, a generic-geology disposal facility model for use in a
+nuclear fuel cycle simulator. Cyder performance within the Cyclus fuel cycle
+simulator and agreement between Cyder and a more detailed stand-alone model are
+also demonstrated. The methods make a strategic tradeoff between speed and
+fidelity, and capture essential physics when computing back-end nuclear fuel
+cycle metrics. The result is a library of medium-fidelity hydrologic
+contaminant transport models within a disposal facility simulation framework
+appropriate for use in dynamic nuclear fuel cycle simulators.
+
+Thank you for your consideration of my work.  I expect it will be of interest
+to a broad readership concerned with environmental issues and nuclear fuel
+cycle simulation.  Please address all correspondence concerning this manuscript
+to me at UC Berkeley and feel free to correspond with me by e-mail
+(huff@berkeley.edu).
+
+\closing{Sincere regards,\\\vspace{-22mm}%
+\includegraphics[height=1.5cm]{signature.eps}\\
+}
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+
+\end{document}
+
+

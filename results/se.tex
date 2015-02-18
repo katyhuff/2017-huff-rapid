@@ -1,0 +1,36 @@
+
+Each of the radionuclide contaminant transport models described in Section
+\ref{sec:nuclide_models} capture different combintations of physics present in
+the hydrologic contaminant transport problem. To determine how effectively
+these physics were captured, single-effect simulations were conducted with
+\Cyder and compared to similar analysis \cite{huff_key_2012} conducted with a
+more detailed radionuclide transport model, the Clay \gls{GDSM}
+\cite{clayton_generic_2011}. The Clay \gls{GDSM} was developed by the \gls{UFD}
+Campaign within the \gls{DOE} Office of Nuclear Energy using the GoldSim
+simulation environment \cite{golder_associates_goldsim_2010}. Hydrologic
+contaminant transport in the Clay \gls{GDSM} relies on the GoldSim contaminant
+transport module \cite{golder_associates_goldsim_2010-1}.
+
+These single-effect sensitivity analyses were constructed by repeated
+multi-component simulation runs conducted accross the valid range for a single
+parameter. To verify the behavior of a single parameter of each of the \Cyder
+models, one hundred multi-component simulations were conducted, each with a
+different value of that parameter.  This parametric analysis was conducted to
+show that, for an arbitrary isotope, the expected dependence on that parameter
+is captured. In the case of real isotopes in a full simulation, the same model
+will be invoked with real parameters for each isotope. Thus, the this model
+agreement is representative in all cases.
+
+The results acheived with \Cyder were compared to the results of a similiar
+parametric sensitivity analysis using the Clay \gls{GDSM} reported in
+\cite{huff_key_2012}.
+
+\subsubsection{Solubility Sensitivity}
+\input{./results/sol_results}
+\FloatBarrier
+\subsubsection{Sorption Sensitivity}
+\input{./results/kd}
+\FloatBarrier
+\subsubsection{Waste Form Degradation Rate Sensitivity}
+\input{./results/wf_deg_inv}
+\FloatBarrier
