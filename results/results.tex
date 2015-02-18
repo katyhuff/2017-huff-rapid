@@ -28,33 +28,33 @@ deployed during development to verify \Cyder software implementation.
 % The existence of this code enables dynamic analysis of repository performance
 % during fuel cycle simulation.
 
-This work has provided a flexible code for rapid medium fidelity calculation
-of generic repository performance in the context of fuel cycle analysis.
-Capable of hydrologic contaminant transport discussed here, thermal transport
-demonstrated elsewhere, and integration within a fuel cycle simulation code,
-\Cyder is the first of its kind.
+This work has provided a flexible software library for rapid medium-fidelity
+calculation of generic repository performance in the context of fuel cycle
+analysis.  Capable of hydrologic contaminant transport and integration within a
+fuel cycle simulation library, \Cyder is the first of its kind.
 
-In this work, key conceptual components and modeling methods for geologic
-radioactive waste disposal were identified as part of a literature review,
-dominant physics of thermal and radionuclide transport were identified by
-conducting sensitivity analyses with detailed codes. Accordingly, a basic set
-of abstracted models were developed and implemented within the \Cyder code.
+In this work, modeling methods for geologic radioactive waste disposal
+performance analysis were described as was their implementation in the \Cyder
+repository performance library. The application programming interface to this
+software library is intentionally general, facilitating the incorporation of
+the models presented here within external software tools.
 
-A set of basic capabilities within the \Cyder library have been developed and
-validated and an assortment of advanced features, data, testing, and plotting
-capabilities are functional. The \Cyder source code in which these models are
-implemented is made freely available to interested researchers and potential
-model developers \cite{huff_cyder_2013}. In addition to the source code and
-supporting publications, the \Cyder code is well commented and produces
-clickable, browsable automated documentation with each build. That
-documentation is also available online \cite{huff_cyder_2013}.
+\Cyder performance within the \Cyclus fuel cycle simulator and agreement
+between Cyder and a more detailed stand-alone model were also demonstrated.
+\Cyder methods make a strategic tradeoff between speed and fidelity, capturing
+essential physics when computing back-end nuclear fuel cycle metrics. The
+result is a library of medium-fidelity hydrologic contaminant transport models
+within a disposal facility simulation framework appropriate for use in dynamic
+nuclear fuel cycle simulators.
 
-The application programming interface to this software library is intentionally
-general, facilitating the incorporation of the models presented here within
-external software tools in need of a multicomponent disposal system simulator.
+The \Cyder source code is freely available to interested researchers and
+potential model developers \cite{huff_cyder_2013}.  In addition to the source
+code and supporting publications, the \Cyder library is well commented and
+produces clickable, browsable automated documentation with each build. That
+documentation is also available online.
 
-Furthermore, this work contributes to an expanding ecosystem of computational
-models available for use with the Cyclus fuel cycle simulator. This hydrologic
+Finally, this work contributes to an expanding ecosystem of computational
+models available for use with the \Cyclus fuel cycle simulator. This hydrologic
 nuclide transport library, by virtue of its capability to modularly integrate
-with the Cyclus fuel cycle simulator has laid the foundation for integrated
+with the \Cyclus fuel cycle simulator has laid the foundation for integrated
 disposal option analysis in the context of fuel cycle options.
