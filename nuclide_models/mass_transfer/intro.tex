@@ -1,23 +1,23 @@
-The mass transfer interfaces between the mass balance models are essential to 
-the understanding of the \Cyder paradigm.  Depending on the mass balance model 
-selected in the external of two components, mass transfer into that component is 
-either explicit or implicit.  
+The mass transfer interfaces between the mass balance models are essential to
+the understanding of the \Cyder paradigm.  Depending on the mass balance model
+selected in the external of two components, mass transfer into that component is
+either explicit or implicit.
 
-In the explicit mode, the mass transfer mode is chosen by the user. Available 
-options include  advective, dispersive, 
-coupled, or fixed flux. The correspon calculated based on the conditions at the transfer 
-boundary. The inventory in the components is then updated based on this transfer 
-rate. While all components enable this on their outer boundary, only the mass 
-balance models that are 0-dimensional in space (the Degradation Rate model and 
+In the explicit mode, the mass transfer mode is chosen by the user. Available
+options include  advective, dispersive,
+coupled, or fixed flux. The correspon calculated based on the conditions at the transfer
+boundary. The inventory in the components is then updated based on this transfer
+rate. While all components enable this on their outer boundary, only the mass
+balance models that are 0-dimensional in space (the Degradation Rate model and
 the Mixed Cell model) require explicit transfer on their inner boundary.
 
-In the implicit mode, the mass balance model of the external component determines 
-the inventory based on boundary conditions provided by the internal component. 
+In the implicit mode, the mass balance model of the external component determines
+the inventory based on boundary conditions provided by the internal component.
 The appropriate mass is then transferred to accomplish the change in inventory.
 
-In groundwater transport, contaminants are transported by dispersion and 
+In groundwater transport, contaminants are transported by dispersion and
 advection such that the mass conservation equationfor mass flux
-becomes \cite{schwartz_fundamentals_2004, wang_introduction_1982, 
+becomes \cite{schwartz_fundamentals_2004, wang_introduction_1982,
 van_genuchten_analytical_1982}:
 
      \begin{align}
@@ -27,14 +27,14 @@ van_genuchten_analytical_1982}:
       J_{adv} &= \mbox{ Advective Mass Flux }[kg/m^2/s].\nonumber
       \end{align}
 
-It is customary to define the combination of molecular diffusion and 
-mechanical mixing as the dispersion tensor, $D$, such that, for a conservative 
-solute (infinitely soluble and non-sorbing), so that the dispersive component 
-can be described in terms of the concentration profile: 
+It is customary to define the combination of molecular diffusion and
+mechanical mixing as the dispersion tensor, $D$, such that, for a conservative
+solute (infinitely soluble and non-sorbing), so that the dispersive component
+can be described in terms of the concentration profile:
 
     \begin{align}
       J_{dis} &= \mbox{ Total Dispersive Mass Flux }[kg/m^2/s]\nonumber\\
-      &= -\theta(D_{mdis} + \tau D_m)\nabla C \nonumber\\ 
+      &= -\theta(D_{mdis} + \tau D_m)\nabla C \nonumber\\
       &= -\theta D\nabla C \nonumber
       \intertext{where}
       \theta &= \mbox{ Porosity }[-] \nonumber\\
@@ -45,8 +45,8 @@ can be described in terms of the concentration profile:
       D &= \mbox{ Effective Dispersion Coefficient }[m^2/s].\nonumber
     \end{align}
 
-Meanwhile, the advective mass flux depends on the concentration, the porosity 
-of the medium, and the fluid velocity in that medium, 
+Meanwhile, the advective mass flux depends on the concentration, the porosity
+of the medium, and the fluid velocity in that medium,
 
     \begin{align}
       J_{adv} &= \mbox{ Advective Mass Flux }[kg/m^2/s]\nonumber\\
@@ -54,7 +54,7 @@ of the medium, and the fluid velocity in that medium,
       v &= \mbox{ Fluid Velocity in the medium }[m/s].\nonumber
     \end{align}
 
-For uniform flow in $\hat{k}$, 
+For uniform flow in $\hat{k}$,
     \begin{align}
       J &=\left(-\theta D_{xx} \frac{\partial C}{\partial x}
              \right)\hat{\imath}
@@ -65,15 +65,15 @@ For uniform flow in $\hat{k}$,
       \label{unidirflow}
     \end{align}
 
-Solutions to this equation can be categorized by their boundary conditions.  
-Those boundary conditions serve as the interfaces between components in the 
-\Cyder library of nuclide transport models by way of advective, dispersive, 
-coupled, and fixed fluxes.  This is supported by implementation in which 
-vertical advective velocity, $v_z$, is uniform throughout the system and in which 
-characteristic geologic and material parameters such as the dispersion 
-coefficient are known for each component. 
+Solutions to this equation can be categorized by their boundary conditions.
+Those boundary conditions serve as the interfaces between components in the
+\Cyder library of nuclide transport models by way of advective, dispersive,
+coupled, and fixed fluxes.  This is supported by implementation in which
+vertical advective velocity, $v_z$, is uniform throughout the system and in which
+characteristic geologic and material parameters such as the dispersion
+coefficient are known for each component.
 
-The mass transfer modes available in \Cyder represent a range of boundary 
-conditions. The following sections cover the mathematical models defining those 
-that have been implemented and how they relate to the mass balance models in 
+The mass transfer modes available in \Cyder represent a range of boundary
+conditions. The following sections cover the mathematical models defining those
+that have been implemented and how they relate to the mass balance models in
 Section \ref{sec:mass_balance}.

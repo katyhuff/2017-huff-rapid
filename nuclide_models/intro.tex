@@ -1,26 +1,26 @@
-\Cyder conducts radionuclide contaminant transport through a generic geologic 
-repository concept to determine the 
-contaminants expected to reach the environment. This key calculation 
-informs repository performance assesment metrics related to containment and 
+\Cyder conducts radionuclide contaminant transport through a generic geologic
+repository concept to determine the
+contaminants expected to reach the environment. This key calculation
+informs repository performance assesment metrics related to containment and
 environmental impact.
 
-To acheive this, \Cyder models engineered and natural containment barriers as 
+To acheive this, \Cyder models engineered and natural containment barriers as
 distinct control volumes. These \emph{components} are arranged in a regular
 grid at a single vertical depth within a geologic component as in Figure
 \ref{fig:repo_layout}.
 
 \input{./nuclide_models/layout}
 
-Component mass 
-inventory is a simple sum of in and out flows while mass distribution within 
-the component is determined by the dominant physics of the mass balance model 
-selected for that volume.  Adjacent components share mass transfer interfaces 
-across which mass transfer is calculated based on internal component mass 
-inventory and distribution. 
+Component mass
+inventory is a simple sum of in and out flows while mass distribution within
+the component is determined by the dominant physics of the mass balance model
+selected for that volume.  Adjacent components share mass transfer interfaces
+across which mass transfer is calculated based on internal component mass
+inventory and distribution.
 
-In \Cyder, the mass transfer and mass balance solution follows an implicit 
-\emph{time stepping algorithm}. The solution behavior is determined by selecting 
-among \emph{mass balance models} within the components and selecting 
-among \emph{mass transfer modes} at boundaries between them. This section will describe 
-the mathematics behind these three aspects of the \Cyder paradigm, beginning 
+In \Cyder, the mass transfer and mass balance solution follows an implicit
+\emph{time stepping algorithm}. The solution behavior is determined by selecting
+among \emph{mass balance models} within the components and selecting
+among \emph{mass transfer modes} at boundaries between them. This section will describe
+the mathematics behind these three aspects of the \Cyder paradigm, beginning
 with the phases of the time stepping algorithm.

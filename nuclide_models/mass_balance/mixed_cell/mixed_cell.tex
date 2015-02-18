@@ -1,17 +1,17 @@
 \subsubsection{Mixed Cell Radionuclide Mass Balance Model}\label{sec:mixed_cell}
 
-Slightly more complex, the Mixed Cell model incorporates the influence of 
-porosity, elemental solubility limits, and sorption in addition to the 
-degradation behavior of the Degradation Rate model. A graphical representation 
-of the discrete sub-volumes in the mixed cell model is given in Figure 
-\ref{fig:deg_sorb_volumes}.  
+Slightly more complex, the Mixed Cell model incorporates the influence of
+porosity, elemental solubility limits, and sorption in addition to the
+degradation behavior of the Degradation Rate model. A graphical representation
+of the discrete sub-volumes in the mixed cell model is given in Figure
+\ref{fig:deg_sorb_volumes}.
 
-\input{./nuclide_models/mass_balance/mixed_cell/deg_sorb_volumes} 
+\input{./nuclide_models/mass_balance/mixed_cell/deg_sorb_volumes}
 
-After some time degrading, the total volume in the degraded region can be 
-expressed as in equation \eqref{deg_volumes}. Additionally, the intact and 
-degraded volumes can also be described in terms of their constituent solid 
-matrix and pore fluid volumes, 
+After some time degrading, the total volume in the degraded region can be
+expressed as in equation \eqref{deg_volumes}. Additionally, the intact and
+degraded volumes can also be described in terms of their constituent solid
+matrix and pore fluid volumes,
 
 \begin{align}
 V_d(t_n) &= \mbox{ degraded volume at time }t_n [m^3]\nonumber\\
@@ -27,7 +27,7 @@ V_{ds}(t_n) &= \mbox{ degraded solid volume at time }t_n [m^3]\nonumber\\
        &= (1-\theta) d(t_n) V_T
 \end{align}
 \begin{align}
-V_i(t_n) &= \mbox{ intact volume at time }t_n [m^3]\nonumber\\ 
+V_i(t_n) &= \mbox{ intact volume at time }t_n [m^3]\nonumber\\
        &= V_{if}(t_n) + V_{is}(t_n)
 \end{align}
 \begin{align}
@@ -40,9 +40,9 @@ V_{is}(t_n) &= \mbox{ intact solid volume at time }t_n [m^3]\nonumber\\
        &= (1-\theta) (1-d(t_n))V_T.
 \end{align}
 
-This model distributes contaminant masses throughout each sub-volume of the 
-component. Contaminant 
-masses and concentrations can therefore be expressed with notation indicating 
+This model distributes contaminant masses throughout each sub-volume of the
+component. Contaminant
+masses and concentrations can therefore be expressed with notation indicating
 in which volume they reside, such that
 
 \begin{align}
@@ -52,32 +52,32 @@ C_{if} &= \frac{m_{if}}{V_{if}} \label{c_if}\\
 C_{is} &= \frac{m_{is}}{V_{is}}.  \label{c_is}
 \end{align}
 
-The contaminant mass in the degraded fluid is the contaminant mass that is 
-treated as ``available'' to adjacent components. 
+The contaminant mass in the degraded fluid is the contaminant mass that is
+treated as ``available'' to adjacent components.
 
 \paragraph{Sorption}
 
-The mass in all volumes exists in both sorbed and non-sorbed phases. The 
-relationship between the sorbed mass concentration in the solid phase (e.g. the 
-pore walls), 
+The mass in all volumes exists in both sorbed and non-sorbed phases. The
+relationship between the sorbed mass concentration in the solid phase (e.g. the
+pore walls),
 
 \begin{align}
 s &=\frac{\mbox{ mass of sorbed contaminant} }{ \mbox{mass of total solid phase }}
 \label{solid_conc}
 \end{align}
-and the dissolved liquid concentration, 
+and the dissolved liquid concentration,
 \begin{align}
 C &=\frac{\mbox{ mass of dissolved contaminant} }{ \mbox{volume of total liquid phase }}
 \label{liquid_conc}
 \end{align}
-can be characterized by a sorption ``isotherm'' model. A sorption isotherm 
-describes the equilibrium relationship between the amount of material bound to 
-surfaces and the amount of material in the solution. The MixedCell NuclideModel 
-uses a linear isotherm model.
+can be characterized by a sorption ``isotherm'' model. A sorption isotherm
+describes the equilibrium relationship between the amount of material bound to
+surfaces and the amount of material in the solution. The Mixed Cell mass
+balance model uses a linear isotherm model.
 
-With the linear isotherm model, the mass of contaminant sorbed into the 
-solid phase can be found 
-\cite{schwartz_fundamentals_2004}, according to the relationship 
+With the linear isotherm model, the mass of contaminant sorbed into the
+solid phase can be found
+\cite{schwartz_fundamentals_2004}, according to the relationship
 \begin{align}
 s_p &= K_{dp} c_{p}
 \label{linear_iso}
@@ -97,14 +97,14 @@ s_{dsp} &= \mbox{ isotope p concentration in degraded solids } [kg/kg] \nonumber
 C_{dfp} &= \mbox{ isotope p concentration in degraded fluids } [kg/m^3]. \nonumber
 \end{align}
 
-In this model, sorption is taken into account throughout the volume. In the 
-intact matrix, the contaminant mass is distributed between the pore walls and 
-the pore fluid by sorption.  So too, contaminant mass released from the intact 
-matrix by degradation is distributed between dissolved mass in the free fluid 
+In this model, sorption is taken into account throughout the volume. In the
+intact matrix, the contaminant mass is distributed between the pore walls and
+the pore fluid by sorption.  So too, contaminant mass released from the intact
+matrix by degradation is distributed between dissolved mass in the free fluid
 and sorbed mass in the degraded and precipitated solids.
 
-To begin solving for the boundary conditions in this model, the amount of non-sorbed 
-contaminant mass in the degraded fluid volume must be found. Dropping the 
+To begin solving for the boundary conditions in this model, the amount of non-sorbed
+contaminant mass in the degraded fluid volume must be found. Dropping the
 isotope subscripts and beginning with equations \eqref{c_df} and \eqref{linear_iso},
 
 \begin{align}
@@ -123,14 +123,14 @@ m_{df} &= \frac{d^2 \theta V_T}{dK_d + \frac{d \theta V_T}{m_T}}.
 \end{align}
 
 \paragraph{Solubility}
-Dissolution of the contaminant into the 
-available fluid volume is constrained by the 
+Dissolution of the contaminant into the
+available fluid volume is constrained by the
 elemental solubility limit.
-The reduced mobility of radionuclides with lower 
-solubilities can be modeled \cite{hedin_integrated_2002} as a reduction in the 
+The reduced mobility of radionuclides with lower
+solubilities can be modeled \cite{hedin_integrated_2002} as a reduction in the
 amount of solute available for transport, thus:
 
-\begin{align} 
+\begin{align}
   m_{i}(t)&\le V(t)C_{sol, i}\label{sol_lim}
   \intertext{where}
   m_{i} &= \mbox{ mass of isotope i in volume }V [kg]\nonumber\\
@@ -139,18 +139,18 @@ amount of solute available for transport, thus:
 \end{align}
 
 That is, the mass $m_{1i}$ in  kg of a radionuclide $i$ dissolved into the waste package
-void volume $V_1$ in m$^3$, at a time t, is limited by the solubility limit, 
-the maximum concentration, $C_{sol}$ in kg/m$^3$ at which that radionuclide is 
+void volume $V_1$ in m$^3$, at a time t, is limited by the solubility limit,
+the maximum concentration, $C_{sol}$ in kg/m$^3$ at which that radionuclide is
 soluble \cite{hedin_integrated_2002}.
 
 
-The final available mass is therefore the $m_{df}$ from equation 
+The final available mass is therefore the $m_{df}$ from equation
 \eqref{sorption} constrained by:
     \begin{align}
       m_{df,i} &\leq V_{df} C_{sol,i}
       \label{solubility}
     \intertext{where}
-      m_{df,i} &= \mbox{ solubility limited mass of isotope i in volume }V_{df} [kg]\nonumber\\ 
+      m_{df,i} &= \mbox{ solubility limited mass of isotope i in volume }V_{df} [kg]\nonumber\\
       C_{sol,i} &= \mbox{ the maximum dissolved concentration limit of i }[kg/m^3].\nonumber
     \end{align}
 

@@ -1,11 +1,11 @@
-\subsubsection{Lumped Parameter Radionuclide Mass Balance Model}\label{sec:lumped}
+subsubsection{Lumped Parameter Radionuclide Mass Balance Model}\label{sec:lumped}
 
-For systems in which the flow is sufficiently slow to be assumed constant over 
-a time step, it is possible to model a system of volumes as a connected lumped 
-parameter models (Figure \ref{fig:lumpedseries}). 
-The Lumped Parameter mass balance model implements a response function model 
-based on this lumped parameter interpretation and capable of Piston Flow, 
-Exponential, and Dispersion response functions from Maloszewski and Zuber 
+For systems in which the flow is sufficiently slow to be assumed constant over
+a time step, it is possible to model a system of volumes as a connected lumped
+parameter models (Figure \ref{fig:lumpedseries}).
+The Lumped Parameter mass balance model implements a response function model
+based on this lumped parameter interpretation and capable of Piston Flow,
+Exponential, and Dispersion response functions from Maloszewski and Zuber
 \cite{maloszewski_lumped_1996}.
 
 \begin{figure}[htbp!]
@@ -13,14 +13,14 @@ Exponential, and Dispersion response functions from Maloszewski and Zuber
     \def\svgwidth{\columnwidth}
     \input{./nuclide_models/mass_balance/lumped/lumpedseries.eps_tex}
   \end{center}
-  \caption{A system of volumes can be modeled as lumped parameter models in 
+  \caption{A system of volumes can be modeled as lumped parameter models in
   series.}
   \label{fig:lumpedseries}
 \end{figure}
 
-Each lumped parameter component is modeled according to a 
-relationship between the incoming concentration, $C_{in}(t)$, and the outgoing 
-concentration, $C_{out}(t)$, 
+Each lumped parameter component is modeled according to a
+relationship between the incoming concentration, $C_{in}(t)$, and the outgoing
+concentration, $C_{out}(t)$,
 
 \begin{align}
   C_{out}(t) &= \int_0^\infty C_{in}(t-t')g(t')e^{-\lambda t'}dt'
@@ -31,10 +31,10 @@ concentration, $C_{out}(t)$,
   \lambda &= \mbox{ radioactive decay constant }[s^{-1}].\nonumber
 \end{align}
 
-Selection of the response function is usually based on experimental tracer 
-results in the medium at hand. If such detailed transport  data is not available, 
-functions used commonly in chemical engineering applications 
-\cite{maloszewski_lumped_1996} include the Piston Flow Model (PFM), which 
+Selection of the response function is usually based on experimental tracer
+results in the medium at hand. If such detailed transport  data is not available,
+functions used commonly in chemical engineering applications
+\cite{maloszewski_lumped_1996} include the Piston Flow Model (PFM), which
 approximates pure advection,
 
 \begin{align}
@@ -44,11 +44,11 @@ the Exponential Model (EM) which approximates a well-mixed flow case,
 \begin{align}
   g_{EM}(t') &= \frac{1}{t_t}e^{-\frac{t'}{t_t}}
 \end{align}
-and the so-called Dispersion Model (DM), which actually approximates the solution to both 
+and the so-called Dispersion Model (DM), which actually approximates the solution to both
 advective and dispersive transport,
 \begin{align}
   g_{DM}(t') &= \left( \frac{\emph{Pe }t_t}{4\pi t'} \right)^{\frac{1}{2}}
-  \frac{1}{t'}e^{- \frac{\emph{Pe }t_t\left( 1- \frac{t'}{t_t}  \right)^2} 
+  \frac{1}{t'}e^{- \frac{\emph{Pe }t_t\left( 1- \frac{t'}{t_t}  \right)^2}
   {4t'}}, \intertext{where}
   \emph{Pe}  &= \mbox{ Peclet number for mass diffusion }[-]\nonumber\\
   t_t  &= \mbox{ mean tracer age }[s]\nonumber\\
@@ -66,33 +66,33 @@ advective and dispersive transport,
   \theta_e &= \mbox{ effective (connected) porosity }[\%].\nonumber
 \end{align}
 
-The latter of these, the Dispersion Model satisfies the one dimensional 
-advection-dispersion equation, and is therefore the most physically relevant 
-for this application. A constant inlet concentration is assumed over the span 
-of a time step such that $C_{in}(t) = C_0$, and the solutions to these for 
-constant concentration at the source boundary are given in Maloszewski and 
-Zuber \cite{maloszewski_lumped_1996} accordingly, 
+The latter of these, the Dispersion Model satisfies the one dimensional
+advection-dispersion equation, and is therefore the most physically relevant
+for this application. A constant inlet concentration is assumed over the span
+of a time step such that $C_{in}(t) = C_0$, and the solutions to these for
+constant concentration at the source boundary are given in Maloszewski and
+Zuber \cite{maloszewski_lumped_1996} accordingly,
 
 \begin{align}
   C_{out}(t) &=\begin{cases}
     PFM & C_0e^{-\lambda t_t}\\
     EM  & \frac{C_0}{1+\lambda t_t}\\
-    DM & C_0e^{\frac{\emph{Pe}}{2}\left(1-\sqrt{1+\frac{4\lambda 
+    DM & C_0e^{\frac{\emph{Pe}}{2}\left(1-\sqrt{1+\frac{4\lambda
     t_t}{\emph{Pe}}}\right)}.
   \end{cases}
   \label{lumpedsolns}
 \end{align}
 
-Since \Cyclus handles decay outside of \Cyder, the use of these models relies on a 
-reference transit time and decay constant supplied by the user. The behavior of 
+Since \Cyclus handles decay outside of \Cyder, the use of these models relies on a
+reference transit time and decay constant supplied by the user. The behavior of
 the reference isotope, in this way, fully defines the behavior of all isotopes.
 
-It is important to note that a linear concentration profile is assumed between 
+It is important to note that a linear concentration profile is assumed between
 the inlet and the outlet of a given Component in \Cyder,
 
 \begin{align}
   C(z,t) = C_{in}(t)  + \frac{C_{out}(t) - C_{in}(t)}{z_{out} - z_{in}}(z-z_{in}).
 \end{align}
-This is an approximation that could be improved by direct use of the response 
-functions themselves, under a change of variables from time to length. 
+This is an approximation that could be improved by direct use of the response
+functions themselves, under a change of variables from time to length.
 
