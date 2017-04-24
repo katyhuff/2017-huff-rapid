@@ -1,0 +1,531 @@
+%        File: revise.tex
+%     Created: Wed Oct 09 02:00 PM 2013 P
+% Last Change: Wed Oct 09 02:00 PM 2013 P
+%
+
+%
+% Copyright 2007, 2008, 2009 Elsevier Ltd
+%
+% This file is part of the 'Elsarticle Bundle'.
+% ---------------------------------------------
+%
+% It may be distributed under the conditions of the LaTeX Project Public
+% License, either version 1.2 of this license or (at your option) any
+% later version.  The latest version of this license is in
+%    http://www.latex-project.org/lppl.txt
+% and version 1.2 or later is part of all distributions of LaTeX
+% version 1999/12/01 or later.
+%
+% The list of all files belonging to the 'Elsarticle Bundle' is
+% given in the file `manifest.txt'.
+%
+
+% Template article for Elsevier's document class `elsarticle'
+% with numbered style bibliographic references
+% SP 2008/03/01
+%
+%
+%
+% $Id: elsarticle-template-num.tex 4 2009-10-24 08:22:58Z rishi $
+%
+%
+%\documentclass[preprint,12pt]{elsarticle}
+\documentclass[answers,12pt]{exam}
+
+% Use the option review to obtain double line spacing
+% \documentclass[preprint,review,12pt]{elsarticle}
+
+% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+% for a journal layout:
+% \documentclass[final,1p,times]{elsarticle}
+% \documentclass[final,1p,times,twocolumn]{elsarticle}
+% \documentclass[final,3p,times]{elsarticle}
+% \documentclass[final,3p,times,twocolumn]{elsarticle}
+% \documentclass[final,5p,times]{elsarticle}
+% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+% if you use PostScript figures in your article
+% use the graphics package for simple commands
+% \usepackage{graphics}
+% or use the graphicx package for more complicated commands
+\usepackage{graphicx}
+% or use the epsfig package if you prefer to use the old commands
+% \usepackage{epsfig}
+
+% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+% The amsthm package provides extended theorem environments
+% \usepackage{amsthm}
+\usepackage{amsmath}
+
+% The lineno packages adds line numbers. Start line numbering with
+% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+% for the whole article with \linenumbers after \end{frontmatter}.
+\usepackage{lineno}
+
+% I like to be in control
+\usepackage{placeins}
+
+% natbib.sty is loaded by default. However, natbib options can be
+% provided with \biboptions{...} command. Following options are
+% valid:
+
+%   round  -  round parentheses are used (default)
+%   square -  square brackets are used   [option]
+%   curly  -  curly braces are used      {option}
+%   angle  -  angle brackets are used    <option>
+%   semicolon  -  multiple citations separated by semi-colon
+%   colon  - same as semicolon, an earlier confusion
+%   comma  -  separated by comma
+%   numbers-  selects numerical citations
+%   super  -  numerical citations as superscripts
+%   sort   -  sorts multiple citations according to order in ref. list
+%   sort&compress   -  like sort, but also compresses numerical citations
+%   compress - compresses without sorting
+%
+% \biboptions{comma,round}
+
+% \biboptions{}
+
+
+% Katy Huff addtions
+\usepackage{xspace}
+\newcommand{\Cyclus}{\textsc{Cyclus}\xspace}%
+\newcommand{\Cyder}{\textsc{Cyder}\xspace}%
+\usepackage{color}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\erfc}{erfc}
+
+
+% \journal{Progress in Nuclear Energy}
+
+\begin{document}
+
+%\begin{frontmatter}
+
+   % Title, authors and addresses
+
+   % use the tnoteref command within \title for footnotes;
+   % use the tnotetext command for the associated footnote;
+   % use the fnref command within \author or \address for footnotes;
+   % use the fntext command for the associated footnote;
+   % use the corref command within \author for corresponding author footnotes;
+   % use the cortext command for the associated footnote;
+   % use the ead command for the email address,
+   % and the form \ead[url] for the home page:
+   %
+   % \title{Title\tnoteref{label1}}
+   % \tnotetext[label1]{}
+   % \author{Name\corref{cor1}\fnref{label2}}
+   % \ead{email address}
+   % \ead[url]{home page}
+   % \fntext[label2]{}
+   % \cortext[cor1]{}
+   % \address{Address\fnref{label3}}
+   % \fntext[label3]{}
+
+\title{Rapid Methods for Radionuclide Contaminant Transport in Nuclear Fuel Cycle Simulation}
+
+   % use optional labels to link authors explicitly to addresses:
+   % \author[label1,label2]{<author name>}
+   % \address[label1]{<address>}
+   % \address[label2]{<address>}
+
+
+%\author[uiuc]{Kathryn Huff}
+%        \ead{kdhuff@illinois.edu}
+%  \address[uiuc]{Department of Nuclear, Plasma, and Radiological Engineering,
+%        118 Talbot Laboratory, MC 234, Universicy of Illinois at
+%        Urbana-Champaign, Urbana, IL 61801}
+%
+% \end{frontmatter}
+
+\section*{General Comments}
+I'd like to extend my immense thanks to the reviewers, whom I think have
+improved this manuscript dramatically with their insightful comments. Please
+see below for discussion of each.  
+
+\section*{Reviewer 1}
+
+\begin{questions}
+\question I enjoyed reviewing this manuscript, but I found it difficult to understand.
+The manuscript seemed to lack specific goals and conclusions. It was very
+abstract and long.  This reviewer wondered if the addition of examples would
+have made the manuscript more useful. The title used the word “rapid,” but this
+property was not developed in the text. Was this a review paper? Some of the
+figures in the current manuscript were illegible. I hope that the following
+comments can improve the manuscript.
+\begin{solution}
+The manuscript was edited once through for brevity, reducing the page length by
+X pages. Specific goals (to demonstrate the capabilities of the Cyder software
+in comparison to GoldSim) and conclusions (appropriate validity for
+medium-fidelity fuel cycle simulations) were added to the introduction. Figures
+X \& Y were reviewed and revised for better legibility.
+\end{solution}
+
+\question This abstract seemed to lack a clear statement of the goals of the paper, the methods used, results, and conclusions.
+\begin{solution}
+<++>
+\end{solution}
+
+\question Page 2 : Somewhere in this paragraph, we needed a statement about the goals and objectives of this study.
+\begin{solution}
+<++>
+\end{solution}
+
+
+\question Line 35. Was this section still part of the introduction?
+
+\begin{solution}
+<++>
+\end{solution}
+
+\question Figure 1. Was z depth?
+\begin{solution}
+<++>
+\end{solution}
+
+\question Page 4 : Line 62. What were the outer and inner components?
+
+\begin{solution}
+<++>
+\end{solution}
+ 
+
+\question Figure 2. All abbreviations in figures need to be defined in the figure caption.
+\begin{solution}
+<++>
+\end{solution}
+ 
+
+\question Page 5: What did “10[kg]” mean?
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Line 82 plus. An example would have been helpful.
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Page 6 : Equation 4. Why 10?
+
+ 
+\begin{solution}
+<++>
+\end{solution}
+
+\question Page 7 Lines 115 to 128. An example would have been helpful. This manuscript was abstract, and not easy to read.
+
+\begin{solution}
+<++>
+\end{solution}
+ 
+
+\question Line 130. This statement needs a reference.
+
+\begin{solution}
+<++>
+\end{solution}
+
+\question Figure 5. Again, we need to define all figures symbols and abbreviations in the figure caption.
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Page 9 Figure 6 caption. Why is only Vdf available for transport?
+\begin{solution}
+<++>
+\end{solution}
+ 
+
+\question Equation 12. What did “degraded volume” mean?
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Page 10 Equation 15. What was the “degraded solid volume?”
+
+\begin{solution}
+<++>
+\end{solution}
+ 
+
+\question Page 11 Line 173. “Into” or “onto?”
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question No line number. The “solid concentration?” What did that mean?
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Line 177. What type of degradation?
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question No line number. What did “sorbate is in the degradable solids” mean?
+
+ 
+
+\question Page 14 Line 210 should begin with “Because.” Since is a time such as “Since this morning, I’ve been reading this manuscript.”
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Page 22 Line 330. Were these experiments done for the current study? How much of the current manuscript is new material, and how much was already published in reference 21?
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Line 342. “Were conducted” Why is this statement in the results section?
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Line 344. What was a “global parameter?
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Line 348. What did “accepting 1 waste stream” mean?
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Line 351. What did “a far field component” mean?
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Line 358. A solubility limitation was set? Does this mean that CYDER does not use actual solubility values?
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Figure 9. We need to define all symbols and abbreviations used in a figure.
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Figures 10, 11, 12, and 13 are illegible. They are too small. Label all axes.
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Page 24 Line 389 hints some of the material in the current manuscript has already been published in reference 21.
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Line 399. What is a “sharp turnover?”
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Figure 14 is illegible.
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Page 26 Line 419. Kd has units.
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Figure 16 is illegible.
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Lines 432, 434, and 436. Try to use the words "high" and "low" for vertical references rather than to qualify concentrations or properties.
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Figures 18 and 19 are illegible.
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Line 336. Are these conclusions?
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Line 447. “Rapid” relative to what? Compared to what?
+\begin{solution}
+<++>
+\end{solution}
+
+ 
+
+\question Page 29 Lines 456 to 472. The “conclusions” only seemed to promote the use of CYDER. There were no specific conclusions. What was new in this study? 
+\begin{solution}
+<++>
+\end{solution}
+
+
+\section*{Reviewer 2}
+
+
+
+\question This article describes the implementation of a medium-fidelity contaminant transport model applicable to the Cyclus nuclear fuel cycle simulator. Overall this fills an important gap in fuel cycle simulation tools for back-end nuclear fuel cycle assessment.
+\begin{solution}
+<++>
+\end{solution}
+
+\question Overall this article is well-written and well-organized, with careful attention given to methodological details used within the model. One minor issue I have though is that given the specialized nature of the discussion (i.e., hydrology and contaminant transport), there are a number of areas where I feel the clarity of the manuscript could be improved by simply being more explicit with nomenclature used. For example, in line 181, where is the relationship between $m_ds$ and $m_T$ outlined? Similarly, what does "d" (used in Eq. 30) denote - bulk density? Even with some background in the subject matter (which I cannot presume all readers to have) I found this difficult to follow without further explanation of nomenclature.
+\begin{solution}
+<++>
+\end{solution}
+
+\question Similarly, in Figures 9-13, what does $F_d$ refer to? I assume from 
+context that $S_{ref}$ refers to the solubility limit imposed for the nuclide, but again - please make your nomenclature more explicit. 
+\begin{solution}
+<++>
+\end{solution}
+
+\question Likewise, given that the purpose of this study is a qualitative comparison of the behaviors of the Cyder generic repository model to a prior DOE-developed model (the Clay GDSM), it might be helpful to identify which figures originate from the latter. For example, are Figures 14, 18, and 19 from the Clay GDSM? If so, please indicate this explicitly in the captions. 
+\begin{solution}
+<++>
+\end{solution}
+
+\question With respect to Equations 5 and 6, if $m_{ij}$ denotes the mass flux, 
+then shouldn't Equation 6 specify $m_{ij}$ as a time-integrated quantity, given 
+that $m_j(t_n)$ is a mass quantity and $m_{ij}$ is a mass flux?
+\begin{solution}
+<++>
+\end{solution}
+
+\question In equation 28, $c_p$ should be a capital C.
+\begin{solution}
+<++>
+\end{solution}
+
+\question Line 240 (The correspon") appears to be a typo.
+\begin{solution}
+<++>
+\end{solution}
+
+\question In section 3.2.2 (lines 407-408), it would be helpful to define the relationship of the retardation factor $R_f$ to $K_d$. i.e., $R_i = 1 + \rho_b 
+* K_d / \theta$, where $\rho_b$ is the bulk density and theta is the porosity.  Similarly, this is made most clear to the reader if you then illustrate the effect of the retardation factor in terms of the effective contaminant velocity, i.e. $v_{eff} = v/R$, where v is the average linear velocity.
+\begin{solution}
+<++>
+\end{solution}
+
+\question I find the comparison of Figure 20 to Figures 18 \& 19 somewhat confusing; the latter two use a log-log scale, yet Figure 20 is on a linear scale. Is all we are supposed to see a saturation behavior from degradation rate? I still think this comparison would be better expressed as a log-log comparison.
+\begin{solution}
+<++>
+\end{solution}
+
+\question In both the introduction and the conclusions, you indicate that Cyder is compatible with Cyclus (specifically version 0.3). What is the status of its compatibility with the most recent Cyclus v1.5 release? Are there plans to maintain compatibility if it is not presently compatible?
+\begin{solution}
+<++>
+\end{solution}
+
+\question Finally, with respect to citations: 
+-Is there a more complete, locatable citation for [1] and [5]? Citation [6] is incomplete: the full citation is:
+
+Boucher, L., Alvarez Velarde, F., Gonzalez, E., Dixon, B.W., Edwards, G., Dick, 
+G., \& Ono, K. (2012). International comparison for transition scenario codes involving COSI, DESAE, EVOLCODE, FAMILY and VISION. Proceedings of the Eleventh Information Exchange Meeting on Actinide and Fission Product Partitioning and Transmutation, (p. 406). Nuclear Energy Agency of the OECD (NEA)
+
+ISBN: 978-92-64-99174-3
+URL: \verb|https://inis.iaea.org/search/search.aspx?orig_q=RN:44052619|
+\begin{solution}
+<++>
+\end{solution}
+
+\question Is citation [8] a thesis? Please make this more explicit and indicate any kind of URL or other locator device, if possible. Also, should citation [10] point to http://fuelcycle.org? Finally, citation [19] clearly appears to be in error; please check your BibTeX database for this one.
+\begin{solution}
+<++>
+\end{solution}
+
+\section*{Reviewer 3}
+
+\question   - Revisions are more moderate than minor, but should not be overly difficult
+to complete. Please see the attachment. One of the main concerns was that since
+this a software journal, some of the math that is well known to researchers in
+fate and transport might not be known to readers of this journal. This is
+discussed more in the review.
+\begin{solution}
+<++>
+\end{solution}
+
+\section*{Reviewer 4}
+
+\question   - Some aspects of material transport are treated somewhat superficially. The
+first is that the radionuclide waste material that would be transported by
+groundwater is essentially insoluble uranium dioxide to the surface of which
+fission products are bound by adsorption, which is essentially a weak chemical
+bond.  This suspension of particles in water is treated as if it were a water
+solution rather than a suspension.  Relatively straightforward laboratory
+experiments investigating the difference in transport between a true solution
+and a suspension might have resulted in somewhat different parameter values.
+Alternatively, discussion of such experiments might be found in the literature.
+The Hanford site provides a physical example of contaminated groundwater (from
+the French drains) moving through an adsorbing matrix, and might have been
+cited. In addition, published data of groundwater movement at the proposed
+repository site in Nevada might have been cited.  Some tabulation of Cyder
+results with results from some of the cited models would be illuminating. 
+\begin{solution}
+<++>
+\end{solution}
+
+\end{questions}
+  \end{document}
+
+  %
+  % End of file `elsarticle-template-num.tex'.
+
+
