@@ -156,11 +156,12 @@ property was not developed in the text. Was this a review paper? Some of the
 figures in the current manuscript were illegible. I hope that the following
 comments can improve the manuscript.
 \begin{solution}
-The manuscript was edited once through for brevity, reducing the page length by
-X pages. Specific goals (to demonstrate the capabilities of the Cyder software
-in comparison to GoldSim) and conclusions (appropriate validity for
-medium-fidelity fuel cycle simulations) were added to the introduction. Figures
-X \& Y were reviewed and revised for better legibility.
+Thank you for your particularly detailed comments. The manuscript was edited 
+        once through for brevity, reducing the page length by X pages. Specific 
+        goals (to demonstrate the capabilities of the Cyder software in 
+        comparison to GoldSim) and conclusions (appropriate validity for 
+        medium-fidelity fuel cycle simulations) were added to the introduction. 
+        Figures X \& Y were reviewed and revised for better legibility.
 \end{solution}
 
 \question This abstract seemed to lack a clear statement of the goals of the paper, the methods used, results, and conclusions.
@@ -240,7 +241,7 @@ This and all other subsections of section 2.1 reference the overarching example
 \begin{solution}
 This is a very good point. Very few barrier materials degrade appreciably, so I 
 have rephrased this completely and added a reference to recognize the general 
-        stability of most materials in a repository environment. 
+stability of most materials in a repository environment. 
 \end{solution}
 
 \question Figure 5. Again, we need to define all figures symbols and abbreviations in the figure caption.
@@ -252,16 +253,19 @@ Great catch. I have added the missing definition for $V_T$.
 
 \question Page 9 Figure 6 caption. Why is only Vdf available for transport?
 \begin{solution}
-<++>
+Great question. This particular model assumes the portion of the component
+        that remains solid  has a negligible solubility. This model is 
+        appropriate for very durable components, such as borosillicate glass.
+        For this model (but not for all four) the dissolution of the component 
+        material is handled in the degradation rate parameter rather than in a 
+        matrix solubility parameter.  
 \end{solution}
  
 
 \question Equation 12. What did “degraded volume” mean?
 \begin{solution}
-<++>
+This is the volume that reflects the degradation of a was degradation rate over time.
 \end{solution}
-
- 
 
 \question Page 10 Equation 15. What was the “degraded solid volume?”
 
@@ -272,7 +276,7 @@ Great catch. I have added the missing definition for $V_T$.
 
 \question Page 11 Line 173. “Into” or “onto?”
 \begin{solution}
-<++>
+Great catch. I did mean onto.
 \end{solution}
 
  
@@ -429,8 +433,6 @@ Great catch. I have added the missing definition for $V_T$.
 
 \section*{Reviewer 2}
 
-
-
 \question This article describes the implementation of a medium-fidelity contaminant transport model applicable to the Cyclus nuclear fuel cycle simulator. Overall this fills an important gap in fuel cycle simulation tools for back-end nuclear fuel cycle assessment.
 \begin{solution}
 <++>
@@ -508,18 +510,25 @@ URL: \verb|https://inis.iaea.org/search/search.aspx?orig_q=RN:44052619|
 
 \section*{Reviewer 3}
 
-\question   - Revisions are more moderate than minor, but should not be overly difficult
+\question   Revisions are more moderate than minor, but should not be overly difficult
 to complete. Please see the attachment. One of the main concerns was that since
 this a software journal, some of the math that is well known to researchers in
 fate and transport might not be known to readers of this journal. This is
 discussed more in the review.
 \begin{solution}
-<++>
+Thank you. Your main concern is well taken. Other reviewers (above) made 
+        specific requests regarding this balance between software and method. 
+        In addressing those, I believe the paper has become much more 
+        accessible to all readers. Examples have been made more explicit, I 
+        have reduced the wordiness and abstraction of the paper somewhat. I 
+        hope these changes have made the mathematical discussion more 
+        accessible to a broad audience. Please note, however, I do not have 
+        access to the referenced attachment.
 \end{solution}
 
 \section*{Reviewer 4}
 
-\question   - Some aspects of material transport are treated somewhat superficially. The
+\question  Some aspects of material transport are treated somewhat superficially. The
 first is that the radionuclide waste material that would be transported by
 groundwater is essentially insoluble uranium dioxide to the surface of which
 fission products are bound by adsorption, which is essentially a weak chemical
