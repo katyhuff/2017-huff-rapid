@@ -5,8 +5,9 @@
     \def\svgwidth{.4\textwidth}
     \input{./nuclide_models/timesteps/vols.eps_tex}
   \end{center}
-  \caption{Two components share an interface at $r_j$ and contain mass and
-  concentration profiles at the beginning of timestep $t_n$.}
+        \caption{Two components ($j$ and $k$) share an interface at $r_j$. They 
+        each contain mass ($m$) and concentration ($C$) profiles at the 
+        beginning of timestep $t_n$.}
   \label{fig:vols}
 \end{figure}
 
@@ -15,8 +16,9 @@
     \def\svgwidth{.4\textwidth}
     \input{./nuclide_models/timesteps/vols_trans.eps_tex}
   \end{center}
-  \caption{The mass balance model in component k calculates the appropriate
-  mass transfer based on boundary information from component j.}
+        \caption{The mass balance model in component ($k$) calculates the appropriate
+        mass transfer ($m_{jk}$) based on boundary information from component 
+        $j$.}
   \label{fig:vols_trans}
 \end{figure}
 
@@ -25,8 +27,9 @@
     \def\svgwidth{.4\textwidth}
     \input{./nuclide_models/timesteps/vols_update.eps_tex}
   \end{center}
-  \caption{Based on the mass transfer, both components update their mass and
-  concentration profiles based on their mass balance model.}
+        \caption{Based on the mass transfer ($m_{jk}$), both components ($j$ 
+        and $k$) update their mass ($m$) and concentration ($C$) profiles based 
+        on their respective mass balance models.}
   \label{fig:vols_update}
 \end{figure}
 
