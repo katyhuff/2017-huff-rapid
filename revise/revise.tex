@@ -162,6 +162,7 @@ Thank you for your particularly detailed comments. The manuscript was edited
         comparison to GoldSim) and conclusions (appropriate validity for 
         medium-fidelity fuel cycle simulations) were added to the introduction. 
         Figures X \& Y were reviewed and revised for better legibility.
+        {\color{red}*}
 \end{solution}
 
 \question This abstract seemed to lack a clear statement of the goals of the paper, the methods used, results, and conclusions.
@@ -172,7 +173,8 @@ details of the purpose, models, results, and conclusions.
 
 \question Page 2 : Somewhere in this paragraph, we needed a statement about the goals and objectives of this study.
 \begin{solution}
-<++>
+Goals and objectives have been added. 
+        {\color{red}*}
 \end{solution}
 
 
@@ -216,6 +218,7 @@ This and all other subsections of section 2.1 reference the overarching example
         explained in its parent section. This example will be carried through 
         the whole timestepping section. I have added text to communicate this 
         better to the reader. 
+        {\color{red}*}
 \end{solution}
 
  
@@ -233,6 +236,7 @@ This and all other subsections of section 2.1 reference the overarching example
         explained in its parent section. This example will be carried through 
         the whole timestepping section. I have added text to communicate this 
         better to the reader. 
+        {\color{red}*}
 \end{solution}
  
 
@@ -242,6 +246,7 @@ This and all other subsections of section 2.1 reference the overarching example
 This is a very good point. Very few barrier materials degrade appreciably, so I 
 have rephrased this completely and added a reference to recognize the general 
 stability of most materials in a repository environment. 
+        {\color{red}*}
 \end{solution}
 
 \question Figure 5. Again, we need to define all figures symbols and abbreviations in the figure caption.
@@ -249,54 +254,62 @@ stability of most materials in a repository environment.
 Great catch. I have added the missing definition for $V_T$. 
 \end{solution}
 
- 
-
 \question Page 9 Figure 6 caption. Why is only Vdf available for transport?
 \begin{solution}
-Great question. This particular model assumes the portion of the component
-        that remains solid  has a negligible solubility. This model is 
-        appropriate for very durable components, such as borosillicate glass.
-        For this model (but not for all four) the dissolution of the component 
-        material is handled in the degradation rate parameter rather than in a 
-        matrix solubility parameter.  
+Great question. This particular model is naiive. It assumes the portion of the 
+        component that remains solid  has a negligible solubility. This model 
+        is appropriate for very durable components, such as borosillicate 
+        glass.  For this model (but not for all four) the dissolution of the 
+        component material is handled in the degradation rate parameter rather 
+        than in a matrix solubility parameter. A better model would include a 
+        parameter for matrix solubility as well. I believe this should be a 
+        future feature in the package. At the moment, users interested in this 
+        higher fidelity can choose the 1D PPM model instead. 
+        {\color{red}*}
 \end{solution}
- 
 
 \question Equation 12. What did “degraded volume” mean?
 \begin{solution}
-This is the volume that reflects the degradation of a was degradation rate over time.
+This is the volume that reflects the degradation rate of the component. The 
+        volume is the degradation rate times the initial volume. I have added 
+        text to clarify this.
+        {\color{red}*}
 \end{solution}
 
 \question Page 10 Equation 15. What was the “degraded solid volume?”
-
 \begin{solution}
-<++>
+        This is the volume that has been degraded, but remains solid. I have 
+        added text to clarify this. 
+        {\color{red}*}
 \end{solution}
  
 
 \question Page 11 Line 173. “Into” or “onto?”
 \begin{solution}
-Great catch. I did mean onto.
+Great catch. I did mean onto. Fixed.
 \end{solution}
 
  
 
 \question No line number. The “solid concentration?” What did that mean?
 \begin{solution}
-<++>
+This is the concentration of the contaminant present in the solid component 
+        matrix volume. This has been further clarified in the text.
 \end{solution}
 
  
 
 \question Line 177. What type of degradation?
 \begin{solution}
-<++>
+The model is agnostic to the type, as the model itself asks only for the rate. 
+Release based on this degradation is congruent.
 \end{solution}
 
  
 
 \question No line number. What did “sorbate is in the degradable solids” mean?
-
+\begin{solution}
+\end{solution}
  
 
 \question Page 14 Line 210 should begin with “Because.” Since is a time such as “Since this morning, I’ve been reading this manuscript.”
