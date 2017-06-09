@@ -5,7 +5,7 @@ usually the waste form. An implicit time stepping method arrives at the updated
 state of each component, radially outward, as a function of both the past state
 and the current state of the system. Mass balance is conducted in each
 component at each time step. These calculations proceed from the innermost
-component to the outermost component, with mass transfer calculations conducted
+component (e.g. the waste form) to the outermost component (e.g. the far field), with mass transfer calculations conducted
 at the boundaries. As mass flows from inner components to outer components, the
 mass balances in both components are updated.  Thus, nuclide release
 information passes radially outward from the waste stream sequentially through
@@ -22,7 +22,8 @@ described.
 The flow of the timestepping algorithm is seen in Figures \ref{fig:vols}, 
 \ref{fig:vols_trans}, and \ref{fig:vols_update} and is detailed further in the 
 following sections.  For the remaining discussion, the source, $i$, is the 
-inner and the sink, $j$, is the outer component.  
+inner component (i.e. the waste form) and the sink, $j$, is the outer component 
+(i.e. the waste package).
 
 \input{./nuclide_models/timesteps/timesteps_fig}
 
