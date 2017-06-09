@@ -1,25 +1,26 @@
-
-
 Nuclear fuel cycle and and nuclear waste disposal decisions are
-technologically coupled. For this reason, dynamic
-integration of a generic disposal model with a fuel cycle systems analysis
-framework is necessary to illuminate performance distinctions of candidate
-repository host media, designs, and engineering components in the context of
-fuel cycle options. However, current nuclear fuel cycle simulators lack dynamic
+technologically coupled.  However, current nuclear fuel cycle simulators lack dynamic
 repository performance analysis due to the computational burden of
-high-fidelity hydrolgic contaminant transport models.
+high-fidelity hydrolgic contaminant transport models. The \Cyder disposal 
+envirionment and repository module was developed to fill this gap. It implements medium-fidelity hydrologic 
+radionuclide transport models to support assessment appropriate for fuel
+cycle simulation in the \Cyclus fuel cycle simulator. 
 
-To fill this capability gap, the \Cyder radionuclide contaminant transport
-framework was developed to provide a modular simulation tool for dynamic
-repository performance
-analysis.  Within this framework, medium-fidelity hydrologic radionuclide
-transport models were developed to support assessment appropriate for fuel
-cycle simulation. Rapidly modeling hundreds of waste packages in a geologic
-environment is enabled within this framework by a suite of four closed form
-models for advective, dispersive, coupled, and idealized contaminant transport.
-A summary of the framework and an overview of the mathematical models is
-presented. Additionally, parametric demonstrations simulations performed with
-\Cyder are presented here and compared to parametric simulations with a 
-standalone hydrologic transport model, the Clay Generic Disposal System Model
-developed by the Used Fuel Disposition Campaign Department of Energy Office of
-Nuclear Energy.
+Rapid modeling of hundreds of discrete waste packages in a geologic environment 
+is enabled within this module by a suite of four closed form models for 
+advective, dispersive, coupled, and idealized contaminant transport: a 
+Degradation Rate model, a Mixed Cell model, a Lumped Parameter model, and a 1-D 
+Permeable Porous Medium model.  A summary of the \Cyder module, its 
+timestepping algorithm, and the mathematical models implemented within it are 
+presented. Additionally, parametric demonstrations simulations performed with 
+\Cyder are presented and shown to demonstrate functional agreement with parametric 
+simulations conducted in a standalone hydrologic transport model, the Clay 
+Generic Disposal System Model developed by the Used Fuel Disposition Campaign 
+Department of Energy Office of Nuclear Energy. 
+
+% Add methods used, results, conclusions.
+
+%For this reason, dynamic integration of a generic disposal model with a fuel 
+%cycle systems analysis framework is necessary to illuminate performance 
+%distinctions of candidate repository host media, designs, and engineering 
+%components in the context of fuel cycle options. 
