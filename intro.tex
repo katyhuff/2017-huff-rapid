@@ -1,6 +1,8 @@
 \section{Introduction}\label{sec:introduction}
 Repository performance metrics provide an important basis for comparison among
 p tential nuclear fuel cycles.
+Additionally, nuclear fuel cycle and and nuclear waste disposal decisions are
+technologically coupled through the characteristics of spent fuel which vary among fuel cycles and impact repository design and performance (i.e. \gls{SNF} volume, isotopic composition, mass, disposition, and other variables). 
 For this reason, dynamic integration of a generic disposal model with a fuel 
 cycle systems analysis framework is necessary to illuminate performance 
 distinctions of candidate repository host media, designs, and engineering 
@@ -24,27 +26,34 @@ fail to address the dynamic impact of those waste streams on the performance of 
 geologic disposal system \cite{wilson_comparing_2011}.  Two tools, \gls{COSI}
 \cite{boucher_international_2010} and \gls{VISION} \cite{yacout_vision_2006,
 wilson_comparing_2011, radel_repository_2007, boucher_international_2010},
-dynamically perform heat based capacity calculations.
+dynamically perform heat based capacity calculations. 
 However, those calculations are applicable only for specific
 repository concepts and cannot inform sensitivity to alternate geologic disposal
 system characteristics.
+Since repository capacity and loading strategies are impacted by \gls{SNF} 
+characteristics such as volume and composition, and since those may vary 
+according to fuel cycle strategy and may over time in scenarios which 
+include transitions between fuel cycles, a dynamic coupling between fuel cycle 
+analysis and repository loading and performance more accurately captures reality.
 
-The \Cyder software library \cite{huff_cyder_2013} and its radionuclide
-contaminant transport models were  developed to fill this capability gap.  To
+This paper presents the \Cyder software library \cite{huff_cyder_2013} and its radionuclide
+contaminant transport models, which were  developed to fill this capability gap.  To
 enable dynamic analysis of waste metrics, \Cyder provides medium fidelity
 models to conduct repository performance analysis on efficient timescales
 appropriate for fuel cycle analyses. It has been implemented as a Facility
 compatible with version 0.3 of the \Cyclus framework
-\cite{wilson_cyclus:_2012}, but can also be used as a standalone library. An
+\cite{wilson_cyclus:_2012}, but since it is compiled as a dynamically loadable 
+shared object library with a well defined \gls{API}, it can also be used as a standalone library. An
 overview of the \Cyder framework and mathematical descriptions of its
 radionuclide transport models appear in Section \ref{sec:nuclide_models}.
 
-Parametric demonstration simulations performed with \Cyder were also conducted
-within \Cyclus for verification purposes. Those results are presented in
+The present work also verifies the hydrologic modeling capability in \Cyder 
+through parametric simulations performed with \Cyder
+within \Cyclus. Those results are presented in
 Section \ref{sec:results} alongside comparable parametric simulations conducted
-using a more detailed computational model, the Clay \gls{GDSM}, which was
-developed by the \gls{UFD} Campaign within the \gls{DOE} Office of Nuclear
-Energy \cite{clayton_generic_2011} and relies on the GoldSim simulation
-environment \cite{golder_associates_goldsim_2010-1} and its contaminant
-transport module \cite{golder_associates_goldsim_2010-1}.
+using a more detailed computational model, the Clay \gls{GDSM}. The Clay 
+\gls{GDSM} was developed by the \gls{UFD} Campaign within the \gls{DOE} Office 
+of Nuclear Energy \cite{clayton_generic_2011} and relies on the GoldSim 
+simulation environment \cite{golder_associates_goldsim_2010-1} and its 
+contaminant transport module \cite{golder_associates_goldsim_2010-1}.
 

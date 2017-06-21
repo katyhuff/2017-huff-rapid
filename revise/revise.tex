@@ -172,16 +172,18 @@ details of the purpose, models, results, and conclusions.
 
 \question Page 2 : Somewhere in this paragraph, we needed a statement about the goals and objectives of this study.
 \begin{solution}
-Goals and objectives have been added. 
-        {\color{red}*}
+Goals and objectives have been added. Specifically, to describe the design, 
+        development, and mathematical models within Cyder and to verify the 
+        models in Cyder against a higher fidelity DOE tool, the Clay GDSM.
 \end{solution}
 
 
 \question Line 35. Was this section still part of the introduction?
 
 \begin{solution}
-No, this section begins the first task of this paper, which is to describe the 
-models used. This is the software-paper equivalent of the methods section.
+It's not intended to be. This section begins the first task of this paper, which is to describe the 
+models implemented as part of the work. This is the software-paper equivalent 
+        of the methods section.
 \end{solution}
 
 \question Figure 1. Was z depth?
@@ -609,7 +611,24 @@ repository.  Because  there  is  a  significant  amount  of  mathematical  formu
 physical  conditions  is  of  high  importance.  Please  review  the  figures  and  consider  adding  more  descriptive 
 content. More comments on the figures is discussed below.  
 \begin{solution}
-<++>
+Thank you.
+        Regarding technological coupling, I have added a sentence in the 
+        introduction explaining that fuel cycles and spent fuel repositories 
+        are coupled by SNF volume, isotopic composition, mass, disposition, 
+        activity and other variables. These variables depend on the fuel cycle 
+        choices made upstream and impact repository capacity, loading strategy, 
+        and performance.  
+        Regarding the time step for medium fidelity, I should note here first 
+        that the reference to fidelity is not specifically with regard to time, but 
+        also with spatial and physical simplifications, depending on the model 
+        (among the four) chosen for each component. In the timestepping 
+        sectioon, I have added a note about 
+        the default time step size (1 month) and its appropriateness for this level of 
+        fidelity on disposal timescales. 
+        However, the user is welcome to use arbitrarily small or large 
+        timesteps. 
+        Regarding figures and content, I have made changes according to your 
+        comments below.
 \end{solution} 
 
 \question The  vertical  depth  is  mentioned  first  on  page  2  line  42,  but  not  again  until  page  16,  equation  (43),  and  then 
@@ -621,10 +640,10 @@ There  are reasonable assumptions that can be made, but this is why is it so imp
 physical conditions that this model describes in order to justify this.  
 \begin{solution}
 I have added text on page 18 to explain that model is simply making a 1-D 
-        transport assumption for simplicity. The vertical direction was choice 
+        transport assumption for simplicity. The vertical direction was chosen
         because it is the most conservative choice, among directions, since it 
         is the shortest path to the biosphere (and therefore, perhaps, humans). 
-        As you note, flow is not significant in any direction for most geologic 
+        As you note, flow is not significant in any direction for geologic 
         media under consideration for repository sites internationally. The far field 
         is an excellent barrier to release and of course repositories are 
         accordingly quite good at containment.
@@ -635,18 +654,22 @@ I have added text on page 18 to explain that model is simply making a 1-D
 generally  describes  the  simulations, but not what is shown on each figure. The captions should be descriptive, 
 even if this means there are only one or two figures per page.  
 \begin{solution}
-<++>
+Thank you for this comment. I  have added more detail to these captions to 
+        better define all symbols that appear and to make clear the meaning of 
+        the plots.
 \end{solution} 
  
 \question Page  2  line  7-18:  Explaining  why  dynamic  waste  disposal  calculations  are  valuable,  as  opposed  to  the 
 static outputs from other tools, would make the paper stronger. 
 \begin{solution}
-<++>
+        This has been done (see previous comment in response to your previous 
+        mention of this issue.)
 \end{solution} 
 
 \question Page 2 line 21:  Provide an example of what kind of time step `medium fidelity models' includes 
 \begin{solution}
-<++>
+        This has been done (see previous comment in response to your previous 
+        mention of this issue.)
 \end{solution} 
  
 \question Page  2  line  24:  Explain  the  difference  between  using  Cyder  as  a  standalone  library  and  in  collaboration  with Cyclus 
@@ -792,12 +815,15 @@ Page 23, figure 9: Unclear what the CompID values represent, do not know what $F
 \question Page  23,  figures  10-13:  Unclear  why  the  IsoID  legend  is  
 present  as  the  graphs  only  appear  to  include  $^{238} U$. 
 \begin{solution}
-<++>
+The graphs include all isotopes listed. It is simply the case that the vast 
+        majority of the material in the example was made of $^{238}U$ isotopes. 
+        So, blue is the predominent color, and all others are dwarfed at the 
+        bottom of the plot.
 \end{solution} 
  
 \question Page 24, line 372: 'accross' is spelled wrong 
 \begin{solution}
-<++>
+Fixed.
 \end{solution} 
  
 \question Page  26,  Figure  16:  Both  $^{129}I$  and  $^{79}Se$  exhibit  a  markedly  distinct  behavior  than  the  other  radionuclides 
@@ -816,10 +842,8 @@ Page 28, Figure 18, 19: The text on the graphs is really small and hard to read 
 While  this  isn't  really  that  much  of  an  issue,  it  might  be  prudent  to  enhance  the  graphs  if  possible,  just 
 fyi.  
 \begin{solution}
-<++>
+        <++>
 \end{solution} 
- 
-
 
 \section*{Reviewer 4}
 
