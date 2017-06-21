@@ -84,14 +84,15 @@ m_{ij}= -\dot{m_i} = \dot{m_j}.
 
 \subsubsection{Phase 4: Exterior Mass Balance}
 
-When a mass flux $m_{ij}(t_n)$ is determined between volumes $i$ and $j$, the
+When a mass flux $m_{ij}$ is determined between volumes $i$ and $j$, the
 mass is added to the exterior sink volume $j$. Accordingly, necessary updates
 are made to the mass balance and concentration profile as discussed in Section
 \ref{sec:mass_balance}. In the case of the source and sink, the mass change in
 phase 3 is added to the external component, $j$,
 
 \begin{align}
- m_j(t_n) = m_j(t_{n-1}) + m_{ij}.
+        m_j(t_n) &= m_j(t_{n-1}) + \int_{t_{n-1}}^{t_n}m_{ij}dt.
+                 &= m_j(t_{n-1}) + m_{ij}(t_n).
 \end{align}
 
 \subsubsection{Phase 5: Interior Mass Balance Update}
