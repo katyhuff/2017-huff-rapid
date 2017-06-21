@@ -12,8 +12,11 @@ a finite domain and Cauchy and Neumann boundary conditions at the inner and oute
 boundaries, respectively.
 
 The conceptual model in Figure \ref{fig:1dinf} represents solute transport in
-one dimension with unidirectional flow upward (a conservative assumption) and a
+one dimension with unidirectional flow upward and a
 finite boundary condition in the positive flow direction.
+Notably, unidirectional vertical flow upward in the far field simplifies a 
+3-dimensional problem into one dimenstion. The vertical direction was chosen to 
+be conservative, since the shortest path to the biosphere is the vertical, $z$, direction.
 In \Cyclus, radioactive decay is handled external to the components, so there is
 no need to include production or decay.  An approximate solution for these conditions
 made by Brenner \cite{brenner_diffusion_1962} is described below as
