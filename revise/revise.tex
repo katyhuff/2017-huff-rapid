@@ -478,14 +478,15 @@ Thank you for pointing this out. You are quite right that the Results and
         This is a good point. I neglected to describe (beyond the motivation in 
         the beginning) the speed up provided by Cyder (over GDSM). I have now 
         added a remark on their comparison in the results section and have made 
-        the magnitude of the speed up more clear in the conclusion.
+        the magnitude of the speed up more clear there. (Cyder performs 
+        simulations in minutes where the higher fidelity GDSM requires hours.) 
 \end{solution}
 
  
 
 \question Page 29 Lines 456 to 472. The ``conclusions`` only seemed to promote the use of CYDER. There were no specific conclusions. What was new in this study? 
 \begin{solution}
-Point taken. I have reworked the conclusion to focus on the new work. The 
+Point taken. I have reworked the conclusion to focus on the facts. The 
         design and development of Cyder itself is the primary effort being 
         described in this paper, so a summary of Cyder's capabilities remains 
         in the conclusion. However, I have framed this discussion to also 
@@ -500,18 +501,26 @@ Point taken. I have reworked the conclusion to focus on the new work. The
 
 Overall this article is well-written and well-organized, with careful attention given to methodological details used within the model. One minor issue I have though is that given the specialized nature of the discussion (i.e., hydrology and contaminant transport), there are a number of areas where I feel the clarity of the manuscript could be improved by simply being more explicit with nomenclature used. For example, in line 181, where is the relationship between $m_ds$ and $m_T$ outlined? Similarly, what does "d" (used in Eq. 30) denote - bulk density? Even with some background in the subject matter (which I cannot presume all readers to have) I found this difficult to follow without further explanation of nomenclature.
 \begin{solution}
-In response to this comment, as well as other comments 
+In response to this comment, as well as other similar comments by yourself and 
+        other reviewers, I have added 
+        additional notes in the text to call out  definitions of subscripts 
+        such as $ds$ (degraded solid) and $T$ (total). Relationships were previously described in 
+        equations ($m_{ds}$ in Eq. 22), but I failed to give english 
+        descriptions of these. I have now added english definitions of such volume and 
+        mass subscripts to make this more clear. Thanks! 
 \end{solution}
 
 \question Similarly, in Figures 9-13, what does $F_d$ refer to? I assume from 
 context that $S_{ref}$ refers to the solubility limit imposed for the nuclide, but again - please make your nomenclature more explicit. 
 \begin{solution}
-<++>
+        This is a great catch. I never defined $F_d$ (degradation rate of the 
+        waste form). You are correct about $S_{ref}$ I have now added a definition of 
+        both $F_d$ and $S_{ref}$ to all figure captions where they are used. 
 \end{solution}
 
 \question Likewise, given that the purpose of this study is a qualitative comparison of the behaviors of the Cyder generic repository model to a prior DOE-developed model (the Clay GDSM), it might be helpful to identify which figures originate from the latter. For example, are Figures 14, 18, and 19 from the Clay GDSM? If so, please indicate this explicitly in the captions. 
 \begin{solution}
-<++>
+Correct. This has been fixed with citations in the captions. I think all reviewers made this comment! 
 \end{solution}
 
 \question With respect to Equations 5 and 6, if $m_{ij}$ denotes the mass flux, 
