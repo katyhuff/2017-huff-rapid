@@ -679,7 +679,7 @@ static outputs from other tools, would make the paper stronger.
  
 \question Page  2  line  24:  Explain  the  difference  between  using  Cyder  as  a  standalone  library  and  in  collaboration  with Cyclus 
 \begin{solution}
-I have explained this statement by emphasizing that it is complilable as an 
+I have explained this statement by emphasizing that it is compiled as an 
         independent shared object library with its own application programming 
         interface. This terminology will be appropriate for the readers of this 
         journal.
@@ -709,16 +709,16 @@ pointed out how confusing this is. I have elected to add additional detail to
 \question Page  4  line  74:  Please  explain  source  and  sink  more  thoroughly  for  non-Cyclus  users,  and include more 
 description of these in Figure 2.  
 \begin{solution}
-These are actually unrelated to the \Cyclus notion of the source and sink, so 
-        an explanation may be even more important for Cyclus users! Thanks for 
+Excellent observation. These are actually unrelated to the \Cyclus notion of 
+        the source and sink. So an explanation may be even more important for 
+        Cyclus users (for whom the term is overloaded)! Thanks for 
         pointing this out. I have added a sentence to clarify the meaning of 
-        these two bodies in the example.
+        these two components in the example.
 \end{solution} 
  
 \question Page 5, Figure 4: The asterisk for $t^*_n$ is not defined 
 \begin{solution}
 I have added, to the caption, much more detail about this timestep updating 
-        syntax and all other symbols used in this figure and all other figures. 
 \end{solution} 
 
 
@@ -734,7 +734,11 @@ This equation has been clarified with a statement in the text as well as an
 Radionuclide  Mass  Balance  models;  include  the  inputs,  the  built  in  assumptions,  the  strengths  and  the 
 weaknesses. 
 \begin{solution}
-<++>
+This is an excellent idea. I sketched a bit of this table idea to see it could be 
+        done clearly, but I'm afraid I came up short. The table quickly became 
+        unweildy, given the detail necessary to differentiate the models in 
+        their many facets. I like this suggestion, but was unable to make it 
+        work.
 \end{solution} 
  
 \question Page  8,  Equation  9:  $m_{jk}$  should be defined right below Equation 9 where it is introduced first as opposed 
@@ -746,8 +750,10 @@ Fixed.
 \question Page  9, line 148: Would readers of this journal know the Dirichlet boundary condition? Perhaps include a 
 description of it. 
 \begin{solution}
-Readers of this journal are engineers who write research software for 
-        engineering. I think this is something I don't need to explain, 
+Good question. It is my understanding that readers of this journal are 
+        engineers who write research software for engineering. After looking at 
+        some examples among previous articles in this journal, I think this is 
+        something that the reader will understand, 
         particularly since the form of the boundary condition is given in the 
         figure.
 \end{solution} 
@@ -755,7 +761,8 @@ Readers of this journal are engineers who write research software for
 \question Page  9,  line  150-151:  ``is  the  average  concentration in degraded volume'' at which point (j or k), or at the 
 boundary between the two? The wording is a bit confusing.  
 \begin{solution}
-<++>
+        Good catch. I intended to refer to $C(r_j)$, the concentration at 
+        $r_j$, which is the boundary between $j$ \& $k$.
 \end{solution} 
  
 \question Page 9, Figure 6: This figure would be clearer if $V_T$ was shown as full of the various constituent parts. 
