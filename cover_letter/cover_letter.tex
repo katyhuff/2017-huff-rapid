@@ -1,3 +1,4 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Plain Cover Letter
 % LaTeX Template
 %
@@ -6,92 +7,91 @@
 %
 % Original author:
 % Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+% It was modified by Katy Huff
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-%       PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[10pt]{letter} % Default font size of the document, change to 10pt to fit more text
+\documentclass[11pt]{letter} % Default font size of the document, change to 10pt to fit more text
 \usepackage{graphicx}
 %\usepackage{newcent} % Default font is the New Century Schoolbook PostScript font
 %\usepackage{helvet} % Uncomment this (while commenting the above line) to use the Helvetica font
 
 % Margins
-\topmargin=-1in % Moves the top of the document 1 inch above the default
-\textheight=10in % Total height of the text on the page before text goes on to the next page, this can be increased in a longer letter
-%\oddsidemargin=-10pt % Position of the left margin, can be negative or positive if you want more or less room
-%\textwidth=6.5in % Total width of the text, increase this if the left margin was decreased and vice-versa
-
+\usepackage[left=1.25in,right=1.25in,top=1in,bottom=0.5in]{geometry}
 %\let\raggedleft\raggedright % Pushes the date (at the top) to the left, comment this line to have the date on the right
-%\usepackage{wallpaper}
-%\ULCornerWallPaper{0.97}{bk_logo.eps}
+
+\usepackage{eso-pic,graphicx}
+
+
+%--------------------------------------------------------------------------------------
+%--------INPUT DATA
+%--------------------------------------------------------------------------------------
+\usepackage{xspace}
+\newcommand{\RecipientName}{Professors A.K. Noor and B.H.V. Topping\xspace}
+\newcommand{\RecipientAddress}{Editors, Advances in Engineering Software\xspace}
+%\newcommand{\<++>}{<++>\xspace}
 
 
 \begin{document}
+\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{background.pdf}}
+
 
 %----------------------------------------------------------------------------------------
-%       ADDRESSEE SECTION
+%	ADDRESSEE SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{letter}{Y.Y. Azmy, M.Joyce, and G.H. Su\\
-Editors\\
-Progress in Nuclear Energy}
+\begin{letter}{\RecipientName \\
+        \RecipientAddress}
 
-%----------------------------------------------------------------------------------------
-%       YOUR NAME & ADDRESS SECTION
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%	YOUR NAME & ADDRESS SECTION
+%-------------------------------------------------------------------------------
+\address{Kathryn D. Huff\\
+118 Talbot Laboratory\\
+104 Wright Street\\
+MC-234\\
+Urbana, IL 61801}
 
-\begin{center}
-\includegraphics[width=\textwidth]{bk_logo.eps}
-\end{center}
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT SECTION
+%-------------------------------------------------------------------------------
 
-\address{Department of Nuclear Engineering\\
-4155 Etcheverry Hall\\
-MC 1730\\
-University of California, Berkeley\\
-Berkeley, CA 94720-1730}
+\opening{Dear \RecipientName,}
+Please find enclosed a manuscript entitled: ``Rapid Methods for Radionuclide Contaminant
+Transport in Nuclear Fuel Cycle Simulation'' which I have revised and am resubmitting for exclusive consider-
+ation of publication as a research article in Advances in Engineering Software.
+This manuscript describes the hydrologic contaminant transport methods implemented in
+Cyder, a generic-geology disposal facility model for use in a nuclear fuel cycle simulator.
+Cyder performance within the Cyclus fuel cycle simulator and agreement between Cyder and
+a more detailed stand-alone model are also demonstrated. The methods make a strategic
+tradeoff between speed and fidelity, capturing essential physics when computing back-end
+nuclear fuel cycle metrics. The result is a library of medium-fidelity hydrologic contaminant
+transport models within a disposal facility simulation framework appropriate for use in
+dynamic nuclear fuel cycle simulators.
 
-\name{\vspace{5mm}
-Kathryn Huff\\
-Postdoctoral Scholar\\
-huff@berkeley.edu}
+I have responded individually to each reviewer comment and made moderate changes to the paper accordingly. I feel it has been much improved by the review process. 
 
-%----------------------------------------------------------------------------------------
-%       LETTER CONTENT SECTION
-%----------------------------------------------------------------------------------------
+Thank you for your consideration of this work. I expect it will be of interest to a broad
+readership concerned with applications of object-oriented simulation to engineering prob-
+lems nuclear engineering, algorithms for engineering systems analysis, and computational
+methods for hydrogeologic contaminant transport. Please address all correspondence con-
+cerning this manuscript to me at the University of Illinois at Urbana-Champaign and feel
+free to correspond with me by e-mail (kdhuff@illinois.edu).
 
-\opening{Dear Professors Azmy, Joyce, and Su:}
-
-Please find enclosed a manuscript entitled: ``Rapid Methods for Radionuclide
-Contaminant Transport in Nuclear Fuel Cycle Simulation'' which I am submitting
-for exclusive consideration of publication as a research article in Progress in
-Nuclear Energy.
-
-This manuscript describes the hydrologic contaminant transport methods
-implemented in Cyder, a generic-geology disposal facility model for use in a
-nuclear fuel cycle simulator. Cyder performance within the Cyclus fuel cycle
-simulator and agreement between Cyder and a more detailed stand-alone model are
-also demonstrated. The methods make a strategic tradeoff between speed and
-fidelity, capturing essential physics when computing back-end nuclear fuel
-cycle metrics. The result is a library of medium-fidelity hydrologic
-contaminant transport models within a disposal facility simulation framework
-appropriate for use in dynamic nuclear fuel cycle simulators.
-
-Thank you for your consideration of my work.  I expect it will be of interest
-to a broad readership concerned with environmental issues and nuclear fuel
-cycle simulation.  Please address all correspondence concerning this manuscript
-to me at UC Berkeley and feel free to correspond with me by e-mail
-(huff@berkeley.edu).
-
-\closing{Sincere regards,\\\vspace{-22mm}%
-\includegraphics[height=1.5cm]{signature.eps}\\
+\closing{Sincere regards,
+\includegraphics[height=2cm]{signature}\\
+        \fromsig{Kathryn Huff\\
+Blue Waters Assistant Professor\\
+Nuclear, Plasma, \& Radiological Eng.\\
+U. Illinois at Urbana-Champaign}
 }
-%----------------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
 
 \end{letter}
 
 \end{document}
-
-
