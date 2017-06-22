@@ -94,9 +94,9 @@
 \usepackage{color}
 \DeclareMathOperator{\erf}{erf}
 \DeclareMathOperator{\erfc}{erfc}
+\usepackage[hyphens]{url}
 
-
-% \journal{Progress in Nuclear Energy}
+%\journal{Advances in Engineering Software}
 
 \begin{document}
 
@@ -155,13 +155,12 @@ property was not developed in the text. Was this a review paper? Some of the
 figures in the current manuscript were illegible. I hope that the following
 comments can improve the manuscript.
 \begin{solution}
-Thank you for your particularly detailed comments. The manuscript was edited 
-        once through for brevity, reducing the page length by X pages. Specific 
+Thank you for your particularly detailed comments. I have edited the manuscript
+        once through for brevity. Specific 
         goals (to demonstrate the capabilities of the Cyder software in 
         comparison to GoldSim) and conclusions (appropriate validity for 
         medium-fidelity fuel cycle simulations) were added to the introduction. 
         Figures X \& Y were reviewed and revised for better legibility.
-        {\color{red}*}
 \end{solution}
 
 \question This abstract seemed to lack a clear statement of the goals of the paper, the methods used, results, and conclusions.
@@ -188,7 +187,7 @@ models implemented as part of the work. This is the software-paper equivalent
 
 \question Figure 1. Was z depth?
 \begin{solution}
-Yes, I now have added this fact to the caption.
+Yes, I have now added this fact to the caption.
 \end{solution}
 
 \question Page 4 : Line 62. What were the outer and inner components?
@@ -244,10 +243,10 @@ This and all other subsections of section 2.1 reference the overarching example
 \question Line 130. This statement needs a reference.
 
 \begin{solution}
-This is a very good point. Very few barrier materials degrade appreciably, so I 
-have rephrased this completely and added a reference to recognize the general 
-stability of most materials in a repository environment. 
-        {\color{red}*}
+This is a very good point. Barrier materials do not degrade appreciably over 
+short time scales, so I 
+have rephrased this completely to recognize the general 
+stability of most materials in a repository environment over long time scales. 
 \end{solution}
 
 \question Figure 5. Again, we need to define all figures symbols and abbreviations in the figure caption.
@@ -271,17 +270,20 @@ Great question. This particular model is naiive. It assumes the portion of the
 
 \question Equation 12. What did ``degraded volume'' mean?
 \begin{solution}
-This is the volume that reflects the degradation rate of the component. The 
-        volume is the degradation rate times the initial volume. I have added 
-        text to clarify this.
-        {\color{red}*}
+This is the volume that reflects the degradation state of the component. The 
+        volume is the degradation rate times the initial volume. I have called 
+        out $V_d$ in the text to clarify this.
 \end{solution}
 
 \question Page 10 Equation 15. What was the ``degraded solid volume?''
 \begin{solution}
-        This is the volume that has been degraded, but remains solid. I have 
-        added text to clarify this. 
-        {\color{red}*}
+        This is the volume that has been degraded, but has not dissolved into 
+        the mobile fluid. I have 
+        added text to clarify
+        $V_{is}$,  
+        $V_{ds}$, 
+        $V_{if}$, and
+        $V_{df}$. 
 \end{solution}
  
 
@@ -300,7 +302,8 @@ This is the concentration of the contaminant present in the solid component
 
 \question Line 177. What type of degradation?
 \begin{solution}
-The model is agnostic to the type of degradation, as it is simulated based only 
+        I have added text to explain that the model is agnostic to the 
+        mechanism of degradation, as it is simulated based only 
         on the rate.  Release based on this degradation is congruent.
         {\color{red}*}
 \end{solution}
@@ -404,7 +407,7 @@ The sizes of each has been increased twofold. Axes are all labelled.
 
 \question Page 24 Line 389 hints some of the material in the current manuscript has already been published in reference 21.
 \begin{solution}
-        This reference was an ANS conference summary which presents results of 
+        Reference 21 was an ANS conference summary which presents results of 
         the GoldSim-based Clay GDSM model from DOE. The present work uses that 
         previous work as a benchmark for comparison. That is, in the present 
         work, results from Cyder are compared to those Clay GDSM model results 
@@ -452,7 +455,7 @@ I have increased the size of Figure 16.
 
 \question Lines 432, 434, and 436. Try to use the words "high" and "low" for vertical references rather than to qualify concentrations or properties.
 \begin{solution}
-Interesting lessson. I have changed the text to use fast, slow, and large instead.
+Great advice. I have changed the text to use fast, slow, and large instead.
 \end{solution}
 
  
@@ -504,7 +507,7 @@ Point taken. I have reworked the conclusion to focus on the facts. The
 
 Overall this article is well-written and well-organized, with careful attention given to methodological details used within the model. One minor issue I have though is that given the specialized nature of the discussion (i.e., hydrology and contaminant transport), there are a number of areas where I feel the clarity of the manuscript could be improved by simply being more explicit with nomenclature used. For example, in line 181, where is the relationship between $m_ds$ and $m_T$ outlined? Similarly, what does "d" (used in Eq. 30) denote - bulk density? Even with some background in the subject matter (which I cannot presume all readers to have) I found this difficult to follow without further explanation of nomenclature.
 \begin{solution}
-In response to this comment, as well as other similar comments by yourself and 
+Thank you for your kind words. In response to this comment, as well as other similar comments by yourself and 
         other reviewers, I have added 
         additional notes in the text to call out  definitions of subscripts 
         such as $ds$ (degraded solid) and $T$ (total). Relationships were previously described in 
@@ -547,7 +550,7 @@ Thanks! Fixed.
 * K_d / \theta$, where $\rho_b$ is the bulk density and theta is the porosity.  Similarly, this is made most clear to the reader if you then illustrate the effect of the retardation factor in terms of the effective contaminant velocity, i.e. $v_{eff} = v/R$, where v is the average linear velocity.
 \begin{solution}
         This is an excellent point and I have added the relationship between 
-        $R_f$ and $K_d$ in the text. 
+        $R_f$ and $K_d$ in the text as recommended.
 \end{solution}
 
 \question I find the comparison of Figure 20 to Figures 18 \& 19 somewhat confusing; the latter two use a log-log scale, yet Figure 20 is on a linear scale. Is all we are supposed to see a saturation behavior from degradation rate? I still think this comparison would be better expressed as a log-log comparison.
@@ -571,7 +574,7 @@ Boucher, L., Alvarez Velarde, F., Gonzalez, E., Dixon, B.W., Edwards, G., Dick,
 G., \& Ono, K. (2012). International comparison for transition scenario codes involving COSI, DESAE, EVOLCODE, FAMILY and VISION. Proceedings of the Eleventh Information Exchange Meeting on Actinide and Fission Product Partitioning and Transmutation, (p. 406). Nuclear Energy Agency of the OECD (NEA)
 
 ISBN: 978-92-64-99174-3
-URL: \verb|https://inis.iaea.org/search/search.aspx?orig_q=RN:44052619|
+URL: \url{https://inis.iaea.org/search/search.aspx?orig_q=RN:44052619}
 \begin{solution}
 All fixed. URLs added, bibliography entry for Boucher et al. fleshed out.
 \end{solution}
