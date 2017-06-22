@@ -718,7 +718,7 @@ Excellent observation. These are actually unrelated to the \Cyclus notion of
  
 \question Page 5, Figure 4: The asterisk for $t^*_n$ is not defined 
 \begin{solution}
-I have added, to the caption, much more detail about this timestep updating 
+I have added, to the caption, more detail about this timestep updating syntax and all other symbols used in this figure. 
 \end{solution} 
 
 
@@ -758,7 +758,7 @@ Good question. It is my understanding that readers of this journal are
         figure.
 \end{solution} 
  
-\question Page  9,  line  150-151:  ``is  the  average  concentration in degraded volume'' at which point (j or k), or at the 
+\question Page  9,  line  150-151:  ``is  the  average  concentration throughout the degraded volume'' at which point (j or k), or at the 
 boundary between the two? The wording is a bit confusing.  
 \begin{solution}
         Good catch. I intended to refer to $C(r_j)$, the concentration at 
@@ -767,9 +767,28 @@ boundary between the two? The wording is a bit confusing.
  
 \question Page 9, Figure 6: This figure would be clearer if $V_T$ was shown as full of the various constituent parts. 
 \begin{solution}
-<++>
+This seemed like a great idea, so I tried it (see below). However, I'm not convinced it 
+	isn't actually more confusing, so I have chosen not to make this
+change. If the reviewer feels strongly that the below image is more clear, I
+can certainly make this change, but I do feel like it may actually add to the confusion.
 \end{solution} 
- 
+
+
+\begin{figure}[h!]
+  \begin{center}
+    \def\svgwidth{\columnwidth}
+    \input{./volumes.eps_tex}
+  \end{center}
+  \caption[Constituents of a Mixed Cell Control Volume]{The degraded volume is
+  modeled as a degraded solid volume, $V_{ds}$, and a degraded fluid volume,
+  $V_{df}$. The intact volume is modeled as an intact solid volume, $V_{is}$, and
+  an intact fluid volume $V_{if}$.  Only contaminants in $V_{df}$ are available
+  for transport.}
+  \label{fig:deg_sorb_volumes}
+\end{figure}
+
+\noindent\rule{\textwidth}{0.4pt}
+
 \question Pages 9-10, equations 13-21: $\theta$  is not defined.  
 \begin{solution}
 The porosity, $\theta$, is defined in the paragraph immediately preceeding this 
@@ -778,27 +797,37 @@ The porosity, $\theta$, is defined in the paragraph immediately preceeding this
  
 \question Page  10,  line  161:  Define  contaminant  masses  and  why  they  are  the  ones  available  to  adjacent  components. 
 \begin{solution}
-<++>
+Thank you for this comment. I didn't realize how unclear this was. All masses
+are contaminant masses in this context. I have adde d areminder of this to the
+beginning of the section at what was previously line 114.
 \end{solution} 
  
 \question Page  10,  line  165:  The  use  of the word 'available' is not really mathematically based. Because there are so 
 many equations, the mass transfer of the contaminants should be precisely described.  
 \begin{solution}
-<++>
+Very true. I have replaced this with the more explicit wording, "mass $m_{ij}$
+that can be transferred to the adjacent component in the mass transfer phase."
 \end{solution} 
  
 \question Page 12, Equations 30 \& 31: It is not clear how the result in 31 was obtained from 30.  
 \begin{solution}
-<++>
+Great catch. This was based on the definition of $V_{df}$ as a function of
+$V_T$. I have added text to this effect. But, more importantly, as you noted,
+there was an extra d. Thanks for noticing this level of detail. I have double
+checked the source code and you will be pleased (as I was) to know that in the
+implementation, the $V_{df}$ definiton is plugged in directly, so this typo is
+in the paper only and did not appear in the code itself. 
 \end{solution} 
  
 \question Page 15, lines 220-27: Similar to the comment on the Dirichlet condition, both the Cauchy and Neumann 
 conditions should be clearly defined. They are used in Figure 8 but not clearly indicated either.  
 \begin{solution}
-In my opinion, an explanation of Cauchy and Neuman conditions would 
-        underestimate the readers. Simple differential equation boundary 
-        conditions of this type are well understood by engineers, 
-        particularly the computationally trained readers of this journal.
+I have called these out by name in equations (40) and (41). Given the
+engineering computation background of the readership, I suspect an elementary
+explanation of Cauchy and Neuman conditions would underestimate the readers.
+I hope that common differential equation boundary conditions of this type are well
+understood by engineers, particularly the computationally trained readers of
+this journal.
 \end{solution}
  
 \question Page  16,  Equation  43:  Based  on  experience,  D  and  v  should  be  diffusion coefficient (or dispersion) and 
@@ -847,7 +876,7 @@ Fixed.
 known  that  (43)-(44)  was  what  C(z,t)  represents  in  this  section.  Because  there  is  a  lot  of  derivations,  an 
 earlier mention to this in Section 2.3 should be included.  
 \begin{solution}
-        I don't understand this comment, since Section 2.3 is after, not 
+        I'm sorry to say that I don't understand this comment. Section 2.3 is after, not 
         before, (43) - (44). If you mean section 2.2.3, then please note that 
         each of the four subsections (2.2.1, 2.2.2, 2.2.3, and 2.2.4) seek to 
         describe \emph{different} models for determining C(z,t). So, in fact, 
