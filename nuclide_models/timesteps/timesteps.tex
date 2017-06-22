@@ -11,6 +11,7 @@ mass balances in both components are updated.  Thus, nuclide release
 information passes radially outward from the waste stream sequentially through
 each containment layer to the geosphere in a generic geometry of the form in
 Figure \ref{fig:repo_layout}.
+The default timestep in \Cyclus, and therefore in \Cyder, is one month.
 
 At each component interface where mass transfer occurs and within each component
 where mass balances take place, the flow model is solved with the most up to
@@ -21,10 +22,11 @@ described.
 
 The flow of the timestepping algorithm is seen in Figures \ref{fig:vols}, 
 \ref{fig:vols_trans}, and \ref{fig:vols_update} and is detailed further in the 
-following sections.  For the remaining discussion, the source, $i$, is the 
-inner component (i.e. the waste form) and the sink, $j$, is the outer component 
-(i.e. the waste package). The default timestep in \Cyclus, and therefore in 
-\Cyder, is one month.
+following sections.  For the remaining discussion, the source of material, $i$, is the 
+inner component (i.e. the waste form) and the next destination of the material, 
+$j$, is the adjacent outer component (i.e. the waste package). This example 
+will be carried through the explanation of all five phases of the timestepping 
+algorithm. 
 
 \input{./nuclide_models/timesteps/timesteps_fig}
 
@@ -77,7 +79,9 @@ discussed in Section \ref{sec:mass_transfer}.
 
 In the example case of the source and sink, mass transfered from $i$ to $j$ is 
 determined based on conditions in $i$ and the mass transfer mode between $i$ 
-and $j$,
+and $j$. Said another way, the mass transfer rate $m_{ij}$ between $i$ and $j$ 
+is equivalent to the time derivative $\dot{m}$ of the mass released from $i$ and 
+simultaneously entering $j$,
 
 \begin{align}
 m_{ij}= -\dot{m_i} = \dot{m_j}.
@@ -105,6 +109,6 @@ from the interior source volume, the contained mass distribution and
 concentration profile are updated to reflect this change,
 
 \begin{align}
-  m_{i}^*(t_n) &= m_i(t_n) - m_{ij}(t_n).
+  m_{i}(t_n^*) &= m_i(t_n) - m_{ij}(t_n).
 \end{align}
 
