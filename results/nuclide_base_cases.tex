@@ -24,13 +24,21 @@ following simulation parameters:
 
 Each feasible combination of the four models was conducted to verify
 implementation of the time stepping algorithm and transport modes between
-components. Among these simulations, one in which each component is represented with a Mixed
-Cell model is shown in \ref{fig:mcIIIall} through \ref{fig:mcIII}.  Solubility
-limitation is enabled in this case, so the system is expected to demonstrate
-solubility limited transport.  To simultaneously demonstrate the behavior of
-the solubility limitation, no sorption is applied, but solubility limitation is
-set to 0.001 kg/m$^3$ for all isotopes.  The fixed maximum transport mode was
-used between mixed cell components for speed and clarity of results.
+components. A full description of each of these verification simulations can be 
+found in the dissertation \cite{huff_integrated_2013}. Among these simulations, 
+one in which each component is represented with a Mixed Cell model is shown in 
+\ref{fig:mcIIIall} through \ref{fig:mcIII}.  
+The fixed maximum transport mode was used between mixed cell components for speed and clarity of results.
+
+Solubility limitation is enabled 
+in this case, so the system is expected to demonstrate solubility limited 
+transport.  To simultaneously demonstrate the behavior of the solubility 
+limitation, no sorption is applied, but solubility limitation is set to 0.001 
+kg/m$^3$ for all isotopes.  Please note that the \Cyder user must currently 
+provide reference solubility values for each isotope. While this offers the 
+user complete control, it may be inconvenient for some users. Future extensions 
+to \Cyder will include a default database for these values, perhaps through the 
+\gls{PyNE} database toolkit\cite{bates_pyne_2014}. 
 
 \input{./results/mc_base_fig}
 

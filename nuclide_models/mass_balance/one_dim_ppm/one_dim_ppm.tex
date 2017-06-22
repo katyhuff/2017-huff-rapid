@@ -1,7 +1,9 @@
 \subsubsection{One Dimensional Permeable Porous Medium Radionuclide Mass Balance
 Model}\label{sec:one_dim_ppm}
 
-Various solutions to the advection dispersion equation
+The advection dispersion equation is at the core of contaminant transport. A 
+description of advection and dispersion appears in the following section on 
+mass transfer. For now, it is sufficient to note that various solutions to the advection dispersion equation
 \eqref{unidirflow} have been published for both the first and third types of
 boundary conditions. The third, Cauchy type, is more mass conservative, and is
 the primary kind of boundary condition used at the source for the model
@@ -23,24 +25,30 @@ made by Brenner \cite{brenner_diffusion_1962} is described below as
 it is given in van Genuchten et. al, \cite{van_genuchten_analytical_1982},
 
 \FloatBarrier
+\vspace{4mm}
+
 \begin{figure}[h!]
   \begin{center}
     \def\svgwidth{0.7\columnwidth}
     \input{./nuclide_models/mass_balance/one_dim_ppm/1dfin.eps_tex}
   \end{center}
   \caption[1D finite advection dispersion solution.]{A one-dimensional,
-  finite, unidirectional flow solution with Cauchy and Neumann boundary
-conditions}
+        finite, unidirectional flow solution with Cauchy $(z=0)$ and Neumann 
+        $(z=L)$ boundary
+        conditions.}
   \label{fig:1dinf}
 \end{figure}
 
-For the boundary conditions,
+For the Cauchy boundary condition,
 \begin{align}
   -D \frac{\partial C}{\partial z}\big|_{z=0} + v_zc &= \begin{cases}
     v_zC_0  &  \left( 0<t<t_0 \right)\\
     0  &  \left( t>t_0 \right)\\
   \end{cases}
-\intertext{and}
+\intertext{where}
+      D &= \mbox{ Effective Dispersion Coefficient }[m^2/s]\\
+      v &= \mbox{ Fluid Velocity in the medium }[m/s]
+\intertext{the Neumann boundary condition,}
   \frac{\partial C}{\partial z}\big|_{z=L} &= 0
   \intertext{and the initial condition,}
   C(z,0) &= C_i,
