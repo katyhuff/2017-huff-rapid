@@ -84,7 +84,7 @@ surfaces and the amount of material in the solution. The Mixed Cell mass
 balance model uses a linear isotherm model.
 
 With the linear isotherm model, the mass of contaminant sorbed onto the
-solid phase can be found
+solid phase, also referred to as the solid concentration, can be found
 \cite{schwartz_fundamentals_2004}, according to the relationship
 \begin{align}
 s_p &= K_{dp} C_{p}
@@ -109,7 +109,10 @@ In this model, sorption is taken into account throughout the volume. In the
 intact matrix, the contaminant mass is distributed between the pore walls and
 the pore fluid by sorption.  So too, contaminant mass released from the intact
 matrix by degradation is distributed between dissolved mass in the free fluid
-and sorbed mass in the degraded and precipitated solids.
+and sorbed mass in the degraded and precipitated solids. Note that this model is 
+agnostic to the mechanism of degradation. It simulates degradation purely from 
+a rate and release is accordingly congruent \cite{kawasaki_congruent_2004} with 
+that degradation. 
 
 To begin solving for the boundary conditions in this model, the amount of non-sorbed
 contaminant mass in the degraded fluid volume must be found. Dropping the
