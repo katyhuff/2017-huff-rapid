@@ -123,7 +123,8 @@
    % \address{Address\fnref{label3}}
    % \fntext[label3]{}
 
-\title{Rapid Methods for Radionuclide Contaminant Transport in Nuclear Fuel Cycle Simulation}
+\title{Rapid Methods for Radionuclide Contaminant Transport in Nuclear Fuel 
+        Cycle Simulation}
 
    % use optional labels to link authors explicitly to addresses:
    % \author[label1,label2]{<author name>}
@@ -147,31 +148,33 @@ see below for discussion of each.
 \section*{Reviewer 1}
 
 \begin{questions}
-\question I enjoyed reviewing this manuscript, but I found it difficult to understand.
+\question I enjoyed reviewing this manuscript, but I found it difficult to 
+        understand.
 The manuscript seemed to lack specific goals and conclusions. It was very
 abstract and long.  This reviewer wondered if the addition of examples would
-have made the manuscript more useful. The title used the word ``rapid,'' but this
+have made the manuscript more useful. The title used the word ``rapid,'' but 
+        this
 property was not developed in the text. Was this a review paper? Some of the
 figures in the current manuscript were illegible. I hope that the following
 comments can improve the manuscript.
 \begin{solution}
 Thank you for your particularly detailed comments. I have edited the manuscript
-        once through for brevity. 
-        Specific goals (to demonstrate the capabilities of the Cyder software in 
-        comparison to GoldSim) and conclusions (appropriate validity for 
-        medium-fidelity fuel cycle simulations) were added to the introduction. 
-        Figures and figure captions were reviewed and many were enlarged for 
-        better legibility. All will be provided to the journal office in high 
-        resolution.
+        once through for brevity.  Specific goals (to demonstrate the 
+        capabilities of the Cyder software in comparison to GoldSim) and 
+        conclusions (appropriate validity for medium-fidelity fuel cycle 
+        simulations) were added to the introduction.  Figures and figure 
+        captions were reviewed and many were enlarged for better legibility. 
+        All will be provided to the journal office in high resolution.
 \end{solution}
 
-\question This abstract seemed to lack a clear statement of the goals of the paper, the methods used, results, and conclusions.
+\question This abstract seemed to lack a clear statement of the goals of the 
+        paper, the methods used, results, and conclusions.
 \begin{solution}
 Thank you for this comment. I have re-written the abstract to include concrete 
-details of the purpose, models, results, and conclusions. 
-\end{solution}
+details of the purpose, models, results, and conclusions.  \end{solution}
 
-\question Page 2 : Somewhere in this paragraph, we needed a statement about the goals and objectives of this study.
+\question Page 2 : Somewhere in this paragraph, we needed a statement about the 
+        goals and objectives of this study.
 \begin{solution}
 Goals and objectives have been added. Specifically, to describe the design, 
         development, and mathematical models within Cyder and to verify the 
@@ -182,9 +185,9 @@ Goals and objectives have been added. Specifically, to describe the design,
 \question Line 35. Was this section still part of the introduction?
 
 \begin{solution}
-It's not intended to be. This section begins the first task of this paper, which is to describe the 
-models implemented as part of the work. This is the software-paper equivalent 
-        of the methods section.
+It's not intended to be. This section begins the first task of this paper, 
+        which is to describe the models implemented as part of the work. This 
+        is the software-paper equivalent of the methods section.
 \end{solution}
 
 \question Figure 1. Was z depth?
@@ -201,7 +204,8 @@ to the waste form and waste package as the inner and outer components.
 \end{solution}
  
 
-\question Figure 2. All abbreviations in figures need to be defined in the figure caption.
+\question Figure 2. All abbreviations in figures need to be defined in the 
+        figure caption.
 \begin{solution}
 Great catch. Done for Figs 2, 3, and 4.
 \end{solution}
@@ -230,14 +234,14 @@ This and all other subsections of section 2.1 reference the overarching example
         form).
 \end{solution}
 
-\question Page 7 Lines 115 to 128. An example would have been helpful. This manuscript was abstract, and not easy to read.
+\question Page 7 Lines 115 to 128. An example would have been helpful. This 
+manuscript was abstract, and not easy to read.
 
 \begin{solution}
 This and all other subsections of section 2.1 reference the overarching example 
         explained in its parent section. This example will be carried through 
         the whole timestepping section. I have added text to communicate this 
         better to the reader. 
-        {\color{red}*}
 \end{solution}
  
 
@@ -245,15 +249,14 @@ This and all other subsections of section 2.1 reference the overarching example
 
 \begin{solution}
 This is a very good point. Barrier materials do not degrade appreciably over 
-short time scales, so I 
-have rephrased this completely to recognize the general 
-stability of most materials in a repository environment over long time scales. 
+short time scales, so I have rephrased this completely to recognize the general 
+stability of most materials in a repository environment over long time scales.  
 \end{solution}
 
-\question Figure 5. Again, we need to define all figures symbols and abbreviations in the figure caption.
+\question Figure 5. Again, we need to define all figures symbols and 
+abbreviations in the figure caption.
 \begin{solution}
-Great catch. I have added the missing definition for $V_T$. 
-\end{solution}
+Great catch. I have added the missing definition for $V_T$.  \end{solution}
 
 \question Page 9 Figure 6 caption. Why is only Vdf available for transport?
 \begin{solution}
@@ -266,7 +269,6 @@ Great question. This particular model is naiive. It assumes the portion of the
         parameter for matrix solubility as well. I believe this should be a 
         future feature in the package. At the moment, users interested in this 
         higher fidelity can choose the 1D PPM model instead. 
-        {\color{red}*}
 \end{solution}
 
 \question Equation 12. What did ``degraded volume'' mean?
@@ -279,13 +281,9 @@ This is the volume that reflects the degradation state of the component. The
 \question Page 10 Equation 15. What was the ``degraded solid volume?''
 \begin{solution}
         This is the volume that has been degraded, but has not dissolved into 
-        the mobile fluid. I have 
-        added text to clarify
-        $V_{is}$,  
-        $V_{ds}$, 
-        $V_{if}$, and
-        $V_{df}$. 
-\end{solution}
+        the mobile fluid. I have added text to clarify
+        $V_{is}$,  $V_{ds}$, $V_{if}$, and
+        $V_{df}$.  \end{solution}
  
 
 \question Page 11 Line 173. ``Into'' or ``onto?''
@@ -297,52 +295,53 @@ Great catch. I did mean onto. Fixed.
 \begin{solution}
 This is the concentration of the contaminant present in the solid component 
         matrix volume. This has been further clarified in the text.
-        {\color{red}*}
 \end{solution}
  
 
 \question Line 177. What type of degradation?
 \begin{solution}
         I have added text to explain that the model is agnostic to the 
-        mechanism of degradation, as it is simulated based only 
-        on the rate.  Release based on this degradation is congruent.
-        {\color{red}*}
+        mechanism of degradation, as it is simulated based only on the rate.  
+        Release based on this degradation is congruent.
 \end{solution}
 
  
 
-\question No line number. What did ``sorbate is in the degradable solids'' mean?
+\question No line number. What did ``sorbate is in the degradable solids'' 
+mean?
 \begin{solution}
 I meant sorbed material. Since 'sorbate' was unclear, I have replace the use of 
-sorbate with 'sorbed material' instead. Thank you.
+        sorbate with 'sorbed material' instead. Thank you.
 \end{solution}
  
 
 \question Page 14 Line 210 should begin with ``Because.'' Since is a time such 
 as ``Since this morning, I've been reading this manuscript.''
 \begin{solution}
-I chuckled. Thanks for that. I have fixed this, and noted the lesson for the future. 
-\end{solution}
+I chuckled. Thanks for that. I have fixed this, and noted the lesson for the 
+future.  \end{solution}
 
  
 
-\question Page 22 Line 330. Were these experiments done for the current study? How much of the current manuscript is new material, and how much was already published in reference 21?
+\question Page 22 Line 330. Were these experiments done for the current study? 
+How much of the current manuscript is new material, and how much was already 
+published in reference 21?
 \begin{solution}
 Excellent question. you were not the only reviewer to find this unclear. All 
         simulations were indeed, done specifically for this work and by this 
-        author. Indeed the Clay GDSM results (figures 14, 16, 18, and 19) 
-        were discused in reference 21 (notably, this was just a 4-page ANS 
-        summary and not an archival journal article).
-        I have now clarified this distinction in the captions of 
-        figures 14, 16, 18, and 19. Those simulations were used as reference, 
-        as a higher fidelity verification for the simulations discussed in the 
-        section. The simulations discussed in this section, conducted with 
-        Cyder, are the focus of all other figures and discussion. 
-\end{solution}
+        author. Indeed the Clay GDSM results (figures 14, 16, 18, and 19) were 
+        discused in reference 21 (notably, this was just a 4-page ANS summary 
+        and not an archival journal article).
+        I have now clarified this distinction in the captions of figures 14, 
+        16, 18, and 19. Those simulations were used as reference, as a higher 
+        fidelity verification for the simulations discussed in the section. The 
+        simulations discussed in this section, conducted with Cyder, are the 
+focus of all other figures and discussion.  \end{solution}
 
  
 
-\question Line 342. ``Were conducted'' Why is this statement in the results section?
+\question Line 342. ``Were conducted'' Why is this statement in the results 
+section?
 \begin{solution}
 I'm not sure I understand the concern here. I tend to follow a style guide in 
         which the work presented in the paper is discussed in the past tense, 
@@ -384,29 +383,33 @@ I added a parenthetical to be explicit. It now says ``a far field component
 
  
 
-\question Line 358. A solubility limitation was set? Does this mean that CYDER does not use actual solubility values?
+\question Line 358. A solubility limitation was set? Does this mean that CYDER 
+does not use actual solubility values?
 \begin{solution}
 The user must provide the solubility values. While this provides the user with 
-        complete control, it may be inconvenient for some users. Future extensions to \Cyder will 
-        include a default database, ideally through the PyNE toolkit. I have 
-        added text to this effect.
+        complete control, it may be inconvenient for some users. Future 
+        extensions to \Cyder will include a default database, ideally through 
+        the PyNE toolkit. I have added text to this effect.
 \end{solution}
 
  
 
-\question Figure 9. We need to define all symbols and abbreviations used in a figure.
+\question Figure 9. We need to define all symbols and abbreviations used in a 
+figure.
 \begin{solution}
 Good catch. Done.
 \end{solution}
 
  
 
-\question Figures 10, 11, 12, and 13 are illegible. They are too small. Label all axes.
+\question Figures 10, 11, 12, and 13 are illegible. They are too small. Label 
+all axes.
 \begin{solution}
-The sizes of each has been increased twofold. Axes are all labelled. 
+The sizes of each has been increased twofold. Axes are all labelled.  
 \end{solution}
 
-\question Page 24 Line 389 hints some of the material in the current manuscript has already been published in reference 21.
+\question Page 24 Line 389 hints some of the material in the current manuscript 
+has already been published in reference 21.
 \begin{solution}
         Reference 21 was an ANS conference summary which presents results of 
         the GoldSim-based Clay GDSM model from DOE. The present work uses that 
@@ -440,21 +443,21 @@ I have increased the size of Figure 14.
 \question Page 26 Line 419. Kd has units.
 \begin{solution}
 That is very much true. However, these results are referring to a 
-        multiplication factor applied to $K_d$. I have called this the $K_d$ 
-        factor. While $K_d$ varies by isotope, the factor was applied to all 
-        isotope $K_d$ values. 
-\end{solution}
+multiplication factor applied to $K_d$. I have called this the $K_d$ factor. 
+While $K_d$ varies by isotope, the factor was applied to all isotope $K_d$ 
+values.  \end{solution}
 
 
 \question Figure 16 is illegible.
 \begin{solution}
 I have increased the size of Figure 16.
-        It will be provided separately to the journal in high resolution. 
+        It will be provided separately to the journal in high resolution.  
 \end{solution}
 
  
 
-\question Lines 432, 434, and 436. Try to use the words "high" and "low" for vertical references rather than to qualify concentrations or properties.
+\question Lines 432, 434, and 436. Try to use the words "high" and "low" for 
+vertical references rather than to qualify concentrations or properties.
 \begin{solution}
 Great advice. I have changed the text to use fast, slow, and large instead.
 \end{solution}
@@ -464,7 +467,7 @@ Great advice. I have changed the text to use fast, slow, and large instead.
 \question Figures 18 and 19 are illegible.
 \begin{solution}
 I have increased the size of Figures 18 and 19.
-        They will be provided separately to the journal in high resolution. 
+        They will be provided separately to the journal in high resolution.  
 \end{solution}
 
  
@@ -475,8 +478,7 @@ Thank you for pointing this out. You are quite right that the Results and
         Discussion Section is no replacement for concise conclusions. I have 
         renamed the final subsection (previously called signficance). It is now 
         a section of its own entitled ``Conclusions.'' I have not changed the 
-        text of that section, however. 
-\end{solution}
+text of that section, however.  \end{solution}
 
  
 
@@ -486,49 +488,65 @@ Thank you for pointing this out. You are quite right that the Results and
         the beginning) the speed up provided by Cyder (over GDSM). I have now 
         added a remark on their comparison in the results section and have made 
         the magnitude of the speed up more clear there. (Cyder performs 
-        simulations in minutes where the higher fidelity GDSM requires hours.) 
+simulations in minutes where the higher fidelity GDSM requires hours.) 
 \end{solution}
 
  
 
-\question Page 29 Lines 456 to 472. The ``conclusions`` only seemed to promote the use of CYDER. There were no specific conclusions. What was new in this study? 
-\begin{solution}
-Point taken. I have reworked the conclusion to focus on the facts. The 
-        design and development of Cyder itself is the primary effort being 
-        described in this paper, so a summary of Cyder's capabilities remains 
-        in the conclusion. However, I have framed this discussion to also 
-        emphasize the success of the Cyder verification effort that was the related 
-        focus of this work.
+\question Page 29 Lines 456 to 472. The ``conclusions`` only seemed to promote 
+the use of CYDER. There were no specific conclusions. What was new in this 
+study?  \begin{solution}
+Point taken. I have reworked the conclusion to focus on the facts. The design 
+        and development of Cyder itself is the primary effort being described 
+        in this paper, so a summary of Cyder's capabilities remains in the 
+        conclusion. However, I have framed this discussion to also emphasize 
+        the success of the Cyder verification effort that was the related focus 
+        of this work.
 \end{solution}
 
 
 \section*{Reviewer 2}
 
-\question This article describes the implementation of a medium-fidelity contaminant transport model applicable to the Cyclus nuclear fuel cycle simulator. Overall this fills an important gap in fuel cycle simulation tools for back-end nuclear fuel cycle assessment.
+\question This article describes the implementation of a medium-fidelity 
+contaminant transport model applicable to the Cyclus nuclear fuel cycle 
+simulator. Overall this fills an important gap in fuel cycle simulation tools 
+for back-end nuclear fuel cycle assessment.
 
-Overall this article is well-written and well-organized, with careful attention given to methodological details used within the model. One minor issue I have though is that given the specialized nature of the discussion (i.e., hydrology and contaminant transport), there are a number of areas where I feel the clarity of the manuscript could be improved by simply being more explicit with nomenclature used. For example, in line 181, where is the relationship between $m_ds$ and $m_T$ outlined? Similarly, what does "d" (used in Eq. 30) denote - bulk density? Even with some background in the subject matter (which I cannot presume all readers to have) I found this difficult to follow without further explanation of nomenclature.
+Overall this article is well-written and well-organized, with careful attention 
+given to methodological details used within the model. One minor issue I have 
+though is that given the specialized nature of the discussion (i.e., hydrology 
+and contaminant transport), there are a number of areas where I feel the 
+clarity of the manuscript could be improved by simply being more explicit with 
+nomenclature used. For example, in line 181, where is the relationship between 
+$m_ds$ and $m_T$ outlined? Similarly, what does "d" (used in Eq. 30) denote - 
+bulk density? Even with some background in the subject matter (which I cannot 
+presume all readers to have) I found this difficult to follow without further 
+explanation of nomenclature.
 \begin{solution}
-Thank you for your kind words. In response to this comment, as well as other similar comments by yourself and 
-        other reviewers, I have added 
+Thank you for your kind words. In response to this comment, as well as other 
+        similar comments by yourself and other reviewers, I have added 
         additional notes in the text to call out  definitions of subscripts 
-        such as $ds$ (degraded solid) and $T$ (total). Relationships were previously described in 
-        equations ($m_{ds}$ in Eq. 22), but I failed to give english 
-        descriptions of these. I have now added english definitions of such volume and 
-        mass subscripts to make this more clear. Thanks! 
+        such as $ds$ (degraded solid) and $T$ (total). Relationships were 
+        previously described in equations ($m_{ds}$ in Eq. 22), but I failed to 
+give english descriptions of these. I have now added english definitions of 
+such volume and mass subscripts to make this more clear. Thanks!  
 \end{solution}
 
 \question Similarly, in Figures 9-13, what does $F_d$ refer to? I assume from 
-context that $S_{ref}$ refers to the solubility limit imposed for the nuclide, but again - please make your nomenclature more explicit. 
-\begin{solution}
+context that $S_{ref}$ refers to the solubility limit imposed for the nuclide, 
+but again - please make your nomenclature more explicit.  \begin{solution}
         This is a great catch. I never defined $F_d$ (fractional degradation 
-        rate). You are correct about $S_{ref}$ I have now added a definition of 
-        both $F_d$ and $S_{ref}$ to all figure captions where they are used. 
-\end{solution}
+rate). You are correct about $S_{ref}$ I have now added a definition of both 
+$F_d$ and $S_{ref}$ to all figure captions where they are used.  \end{solution}
 
-\question Likewise, given that the purpose of this study is a qualitative comparison of the behaviors of the Cyder generic repository model to a prior DOE-developed model (the Clay GDSM), it might be helpful to identify which figures originate from the latter. For example, are Figures 14, 18, and 19 from the Clay GDSM? If so, please indicate this explicitly in the captions. 
+\question Likewise, given that the purpose of this study is a qualitative 
+comparison of the behaviors of the Cyder generic repository model to a prior 
+DOE-developed model (the Clay GDSM), it might be helpful to identify which 
+figures originate from the latter. For example, are Figures 14, 18, and 19 from 
+the Clay GDSM? If so, please indicate this explicitly in the captions.  
 \begin{solution}
-Correct. This has been fixed with citations in the captions. I think all reviewers made this comment! 
-\end{solution}
+Correct. This has been fixed with citations in the captions. I think all 
+reviewers made this comment!  \end{solution}
 
 \question With respect to Equations 5 and 6, if $m_{ij}$ denotes the mass flux, 
 then shouldn't Equation 6 specify $m_{ij}$ as a time-integrated quantity, given 
@@ -547,32 +565,50 @@ Correct! Fixed.
 Thanks! Fixed.
 \end{solution}
 
-\question In section 3.2.2 (lines 407-408), it would be helpful to define the relationship of the retardation factor $R_f$ to $K_d$. i.e., $R_i = 1 + \rho_b 
-* K_d / \theta$, where $\rho_b$ is the bulk density and theta is the porosity.  Similarly, this is made most clear to the reader if you then illustrate the effect of the retardation factor in terms of the effective contaminant velocity, i.e. $v_{eff} = v/R$, where v is the average linear velocity.
+\question In section 3.2.2 (lines 407-408), it would be helpful to define the 
+relationship of the retardation factor $R_f$ to $K_d$. i.e., $R_i = 1 + \rho_b 
+* K_d / \theta$, where $\rho_b$ is the bulk density and theta is the porosity.  
+Similarly, this is made most clear to the reader if you then illustrate the 
+effect of the retardation factor in terms of the effective contaminant 
+velocity, i.e. $v_{eff} = v/R$, where v is the average linear velocity.
 \begin{solution}
         This is an excellent point and I have added the relationship between 
         $R_f$ and $K_d$ in the text as recommended.
 \end{solution}
 
-\question I find the comparison of Figure 20 to Figures 18 \& 19 somewhat confusing; the latter two use a log-log scale, yet Figure 20 is on a linear scale. Is all we are supposed to see a saturation behavior from degradation rate? I still think this comparison would be better expressed as a log-log comparison.
+\question I find the comparison of Figure 20 to Figures 18 \& 19 somewhat 
+confusing; the latter two use a log-log scale, yet Figure 20 is on a linear 
+scale. Is all we are supposed to see a saturation behavior from degradation 
+rate? I still think this comparison would be better expressed as a log-log 
+comparison.
 \begin{solution}
-<++>
+I agree that the comparison would be clearer if they were both log-log. 
+        Unfortunately I did not have time to reproduce these graphs (I only had 
+        two days with your detailed comments). However, I hope to be able to 
+        make this change before publication if I am given that opportunity.
 \end{solution}
 
-\question In both the introduction and the conclusions, you indicate that Cyder is compatible with Cyclus (specifically version 0.3). What is the status of its compatibility with the most recent Cyclus v1.5 release? Are there plans to maintain compatibility if it is not presently compatible?
+\question In both the introduction and the conclusions, you indicate that Cyder 
+is compatible with Cyclus (specifically version 0.3). What is the status of its 
+compatibility with the most recent Cyclus v1.5 release? Are there plans to 
+maintain compatibility if it is not presently compatible?
 \begin{solution}
-Quite correct! This work was conducted with Cyclus v.0.3. Current work is ongoing to 
-bring Cyder up to date with the most recent version of Cyclus. This work will 
-serve as fodder for integration testing in that transition, ensuring that the 
-same results are achieved with the new version of Cyder. I have added text to 
-the paper indicating this.
+Quite correct! This work was conducted with Cyclus v.0.3. Current work is 
+        ongoing to bring Cyder up to date with the most recent version of 
+        Cyclus. This work will serve as fodder for integration testing in that 
+        transition, ensuring that the same results are achieved with the new 
+        version of Cyder. I have added text to the paper indicating this.
 \end{solution}
 
-\question Finally, with respect to citations: 
-Is there a more complete, locatable citation for [1] and [5]? Citation [6] is incomplete: the full citation is:
+\question Finally, with respect to citations: Is there a more complete, 
+locatable citation for [1] and [5]? Citation [6] is incomplete: the full 
+citation is:
 
 Boucher, L., Alvarez Velarde, F., Gonzalez, E., Dixon, B.W., Edwards, G., Dick, 
-G., \& Ono, K. (2012). International comparison for transition scenario codes involving COSI, DESAE, EVOLCODE, FAMILY and VISION. Proceedings of the Eleventh Information Exchange Meeting on Actinide and Fission Product Partitioning and Transmutation, (p. 406). Nuclear Energy Agency of the OECD (NEA)
+G., \& Ono, K. (2012). International comparison for transition scenario codes 
+involving COSI, DESAE, EVOLCODE, FAMILY and VISION. Proceedings of the Eleventh 
+Information Exchange Meeting on Actinide and Fission Product Partitioning and 
+Transmutation, (p. 406). Nuclear Energy Agency of the OECD (NEA)
 
 ISBN: 978-92-64-99174-3
 URL: \url{https://inis.iaea.org/search/search.aspx?orig_q=RN:44052619}
@@ -580,7 +616,10 @@ URL: \url{https://inis.iaea.org/search/search.aspx?orig_q=RN:44052619}
 All fixed. URLs added, bibliography entry for Boucher et al. fleshed out.
 \end{solution}
 
-\question Is citation [8] a thesis? Please make this more explicit and indicate any kind of URL or other locator device, if possible. Also, should citation [10] point to http://fuelcycle.org? Finally, citation [19] clearly appears to be in error; please check your BibTeX database for this one.
+\question Is citation [8] a thesis? Please make this more explicit and indicate 
+any kind of URL or other locator device, if possible. Also, should citation 
+[10] point to http://fuelcycle.org? Finally, citation [19] clearly appears to 
+be in error; please check your BibTeX database for this one.
 \begin{solution}
         Yes, 8 was a thesis, 10 now points to fuelcycle.org (an alias of 
         cyclus.github.com), and the URL for 19 has been updated to avoid 
@@ -589,95 +628,106 @@ All fixed. URLs added, bibliography entry for Boucher et al. fleshed out.
 
 \section*{Reviewer 3}
 
-\question   Revisions are more moderate than minor, but should not be overly difficult
+\question   Revisions are more moderate than minor, but should not be overly 
+difficult
 to complete. Please see the attachment. One of the main concerns was that since
 this a software journal, some of the math that is well known to researchers in
 fate and transport might not be known to readers of this journal. This is
 discussed more in the review.
 \begin{solution}
-Thank you. Your main concern is well taken. Other reviewers (above) made 
-        specific requests regarding this balance between software and method. 
-        In addressing those, I believe the paper has become much more 
-        accessible to all readers. Examples have been made more explicit, I 
-        have made attempts to reduced the wordiness and abstraction of the 
-        paper somewhat. I hope these changes have made the mathematical 
-        discussion more accessible to a broad audience. 
+Thank you for your very detailed comments. Your main concern is well taken. 
+Other reviewers (above) made specific requests regarding this balance between 
+software and method.  In addressing those, I believe the paper has become much 
+more accessible to all readers. Examples have been made more explicit, I have 
+made attempts to reduced the wordiness and abstraction of the paper somewhat. I 
+hope these changes have made the mathematical discussion more accessible to a 
+broad audience.  \emph{Please note that I did not have access to your attachment for 
+quite a while (for some reason, it was only available to the editor in 
+evise). After phone calls and emails, it was sent to me, but 
+only two days before the revision submission deadline. I hope you will forgive 
+that I was rushed somewhat when responding to your comments. I very much 
+        appreciate the detail with which you reviewed this paper.} 
 \end{solution}
 
 \question
-Overall,  this  is  a  great  paper,  well  structured  in  discussing  the  CYDER  library,  then  the  various  means  of 
-calculating  radionuclide  transport  behavior,  then  the  underlying  mathematical  models,  and  finally  the  results 
-and  discussion.  At  the  beginning  the  paper  would  benefit  from  
-clarifying  what  is  meant  by  ``technologically 
-coupled.''  Placing  this  paper  in  the  context  a  greater  discussion  of  why  nuclear  waste  disposal  decisions  rely 
-on  the  full  nuclear  fuel  cycle  in  the  abstract  and  introduction  would  make  the  paper stronger.  It would help 
-to  provide  what  a  ``medium-fidelity''  time  step  is  in  terms  of  hydrologic  modeling  of  a  nuclear  waste 
-repository.  Because  there  is  a  significant  amount  of  mathematical  formulations  in  this  paper,  describing  the 
-physical  conditions  is  of  high  importance.  Please  review  the  figures  and  consider  adding  more  descriptive 
-content. More comments on the figures is discussed below.  
-\begin{solution}
+Overall,  this  is  a  great  paper,  well  structured  in  discussing  the  
+CYDER  library,  then  the  various  means  of calculating  radionuclide  
+transport  behavior,  then  the  underlying  mathematical  models,  and  
+finally  the  results and  discussion.  At  the  beginning  the  paper  would  
+benefit  from  clarifying  what  is  meant  by  ``technologically coupled.''  
+Placing  this  paper  in  the  context  a  greater  discussion  of  why  
+nuclear  waste  disposal  decisions  rely on  the  full  nuclear  fuel  cycle  
+in  the  abstract  and  introduction  would  make  the  paper stronger.  It 
+would help to  provide  what  a  ``medium-fidelity''  time  step  is  in  terms  
+of  hydrologic  modeling  of  a  nuclear  waste repository.  Because  there  is  
+a  significant  amount  of  mathematical  formulations  in  this  paper,  
+describing  the physical  conditions  is  of  high  importance.  Please  review  
+the  figures  and  consider  adding  more  descriptive content. More comments 
+on the figures is discussed below.  \begin{solution}
 Thank you.
         Regarding technological coupling, I have added a sentence in the 
         introduction explaining that fuel cycles and spent fuel repositories 
         are coupled by SNF volume, isotopic composition, mass, disposition, 
         activity and other variables. These variables depend on the fuel cycle 
         choices made upstream and impact repository capacity, loading strategy, 
-        and performance.  
-        Regarding the time step for medium fidelity, I should note here first 
-        that the reference to fidelity is not specifically with regard to time, but 
-        also with spatial and physical simplifications, depending on the model 
-        (among the four) chosen for each component. In the timestepping 
-        sectioon, I have added a note about 
-        the default time step size (1 month) and its appropriateness for this level of 
-        fidelity on disposal timescales. 
-        However, the user is welcome to use arbitrarily small or large 
-        timesteps. 
-        Regarding figures and content, I have made changes according to your 
-        comments below.
+        and performance.  Regarding the time step for medium fidelity, I should 
+        note here first that the reference to fidelity is not specifically with 
+        regard to time, but also with spatial and physical simplifications, 
+        depending on the model (among the four) chosen for each component. In 
+        the timestepping section, I have added a note about the default time 
+        step size (1 month) and its appropriateness for this level of fidelity 
+        on disposal timescales.  However, the user is welcome to use 
+        arbitrarily small or large timesteps.  Regarding figures and content, I 
+        have made changes according to your comments below.
 \end{solution} 
 
-\question The  vertical  depth  is  mentioned  first  on  page  2  line  42,  but  not  again  until  page  16,  equation  (43),  and  then 
-page  18,  line  263.  Typically,  for  modeling  radionuclide  transport  in  the repository, flow would be considered 
-in  both  the  +x  and  +z  directions as indicated in Figure 1. (Some models also consider matrix diffusion in the 
-+z  direction).  It  is  not  stated  in  the  paper  why  only  the  flow  in  the  z  direction  is  considered  for this model. 
-For  a  repository  located  at  a  500  m  depth,  for  example, why would the flow in the z direction be significant? 
-There  are reasonable assumptions that can be made, but this is why is it so important to describe precisely the 
-physical conditions that this model describes in order to justify this.  
-\begin{solution}
+\question The  vertical  depth  is  mentioned  first  on  page  2  line  42,  
+but  not  again  until  page  16,  equation  (43),  and  then page  18,  line  
+263.  Typically,  for  modeling  radionuclide  transport  in  the repository, 
+flow would be considered in  both  the  +x  and  +z  directions as indicated in 
+Figure 1. (Some models also consider matrix diffusion in the +z  direction).  
+It  is  not  stated  in  the  paper  why  only  the  flow  in  the  z  
+direction  is  considered  for this model.  For  a  repository  located  at  a  
+500  m  depth,  for  example, why would the flow in the z direction be 
+significant?  There  are reasonable assumptions that can be made, but this is 
+why is it so important to describe precisely the physical conditions that this 
+model describes in order to justify this.  \begin{solution}
 I have added text on page 18 to explain that model is simply making a 1-D 
         transport assumption for simplicity. The vertical direction was chosen
         because it is the most conservative choice, among directions, since it 
-        is the shortest path to the biosphere (and therefore, perhaps, humans). 
+        is the shortest path to the biosphere (and therefore, perhaps, humans).  
         As you note, flow is not significant in any direction for geologic 
-        media under consideration for repository sites internationally. The far field 
-        is an excellent barrier to release and of course repositories are 
+        media under consideration for repository sites internationally. The far 
+        field is an excellent barrier to release and of course repositories are 
         accordingly quite good at containment.
 \end{solution} 
 
  
-\question In  Figures  9-13,  what  information  exactly  is  being  plotted  on  the  graphs should be clearly stated. Section 3.1 
-generally  describes  the  simulations, but not what is shown on each figure. The captions should be descriptive, 
-even if this means there are only one or two figures per page.  
+\question In  Figures  9-13,  what  information  exactly  is  being  plotted  
+on  the  graphs should be clearly stated. Section 3.1 generally  describes  the  
+simulations, but not what is shown on each figure. The captions should be 
+descriptive, even if this means there are only one or two figures per page.  
 \begin{solution}
 Thank you for this comment. I  have added more detail to these captions to 
         better define all symbols that appear to make more clear the meaning of 
         the plots.
 \end{solution} 
  
-\question Page  2  line  7-18:  Explaining  why  dynamic  waste  disposal  calculations  are  valuable,  as  opposed  to  the 
-static outputs from other tools, would make the paper stronger. 
-\begin{solution}
+\question Page  2  line  7-18:  Explaining  why  dynamic  waste  disposal  
+calculations  are  valuable,  as  opposed  to  the static outputs from other 
+tools, would make the paper stronger.  \begin{solution}
         This has been done (see previous comment in response to your initial 
         mention of this issue.)
 \end{solution} 
 
-\question Page 2 line 21:  Provide an example of what kind of time step `medium fidelity models' includes 
-\begin{solution}
+\question Page 2 line 21:  Provide an example of what kind of time step `medium 
+fidelity models' includes \begin{solution}
         This has been done (see previous comment in response to your previous 
         mention of this issue.)
 \end{solution} 
  
-\question Page  2  line  24:  Explain  the  difference  between  using  Cyder  as  a  standalone  library  and  in  collaboration  with Cyclus 
+\question Page  2  line  24:  Explain  the  difference  between  using  Cyder  
+as  a  standalone  library  and  in  collaboration  with Cyclus 
 \begin{solution}
 I have explained this statement by emphasizing that it is compiled as an 
         independent shared object library with its own application programming 
@@ -685,92 +735,93 @@ I have explained this statement by emphasizing that it is compiled as an
         journal.
 \end{solution} 
  
-\question Page  4  lines  59-61:  ``These  calculations  proceed  from  the  inner-most  component  to  the  outermost 
-component,  with  mass  transfer  calculations  conducted  at  the  boundaries.'' Could  use  a  labeled  diagram 
-that  describes  what  the  inner  components  are  versus  the  outer  components  or  provide  more  detail  in 
-Figure 1. I cannot tell what is the ``geosphere'' and what are the various containment layers. 
-\begin{solution}
+\question Page  4  lines  59-61:  ``These  calculations  proceed  from  the  
+inner-most  component  to  the  outermost component,  with  mass  transfer  
+calculations  conducted  at  the  boundaries.'' Could  use  a  labeled  diagram 
+that  describes  what  the  inner  components  are  versus  the  outer  
+components  or  provide  more  detail  in Figure 1. I cannot tell what is the 
+``geosphere'' and what are the various containment layers.  \begin{solution}
 You are not the only reviewer to feel this way, and I appreciate that you have 
-pointed out how confusing this is. I have elected to add additional detail to 
-        the caption of Figure 1 to address this. It now says ``In \Cyder, as in 
-        a canonical drift-tunnel repository, waste form components (the 
-        innermost components) are contained by waste package components which 
-        are, in turn, emplaced in a buffer component (the backfilled 
-        emplacement tunnel into which waste packages are loaded). That buffer 
-        component contains many other waste packages, spaced evenly in a 
-        horizontal grid.  The geosphere (the outermost component) occupies all 
-        space below the repository surface and outside of the buffer components 
-        (emplacement tunnels). The \Cyder repository layout has a depth 
-        ($\Delta z$) and package spacing defined by the user input ($\Delta x$ 
-        within the drifts and $\Delta y$ between drifts.''
+        pointed out how confusing this is. I have elected to add additional 
+        detail to the caption of Figure 1 to address this. It now says ``In 
+        \Cyder, as in a canonical drift-tunnel repository, waste form 
+        components (the innermost components) are contained by waste package 
+        components which are, in turn, emplaced in a buffer component (the 
+        backfilled emplacement tunnel into which waste packages are loaded). 
+        That buffer component contains many other waste packages, spaced evenly 
+        in a horizontal grid.  The geosphere (the outermost component) occupies 
+        all space below the repository surface and outside of the buffer 
+        components (emplacement tunnels). The \Cyder repository layout has a 
+        depth ($\Delta z$) and package spacing defined by the user input 
+        ($\Delta x$ within the drifts and $\Delta y$ between drifts.''
 
 \end{solution} 
  
-\question Page  4  line  74:  Please  explain  source  and  sink  more  thoroughly  for  non-Cyclus  users,  and include more 
-description of these in Figure 2.  
-\begin{solution}
+\question Page  4  line  74:  Please  explain  source  and  sink  more  
+thoroughly  for  non-Cyclus  users,  and include more description of these in 
+Figure 2.  \begin{solution}
 Excellent observation. These are actually unrelated to the \Cyclus notion of 
         the source and sink. So an explanation may be even more important for 
-        Cyclus users (for whom the term is overloaded)! Thanks for 
-        pointing this out. I have added a sentence to clarify the meaning of 
-        these two components in the example.
+        Cyclus users (for whom the term is overloaded)! Thanks for pointing 
+        this out. I have added a sentence to clarify the meaning of these two 
+        components in the example.
 \end{solution} 
  
 \question Page 5, Figure 4: The asterisk for $t^*_n$ is not defined 
 \begin{solution}
-I have added, to the caption, more detail about this timestep updating syntax and all other symbols used in this figure. 
-\end{solution} 
+I have added, to the caption, more detail about this timestep updating syntax 
+and all other symbols used in this figure.  \end{solution} 
 
 
-\question Page  6,  Equation  5: While   is standard notation for mass flow rate, it might be helpful to clearly define 
-it in the text 
-\begin{solution}
+\question Page  6,  Equation  5: While   is standard notation for mass flow 
+rate, it might be helpful to clearly define it in the text \begin{solution}
 This equation has been clarified with a statement in the text as well as an 
         additional equation 6 describing the integral relationship between $m$ 
         and $\dot{m}$.
 \end{solution} 
  
-\question Page  7-16:  Might  be  more  clear  to  include  a  table  that  shows  the  differences  between  the  four 
-Radionuclide  Mass  Balance  models;  include  the  inputs,  the  built  in  assumptions,  the  strengths  and  the 
-weaknesses. 
-\begin{solution}
-This is an excellent idea. I sketched a bit of this table idea to see it could be 
-        done clearly, but I'm afraid I came up short. The table quickly became 
-        unweildy, given the detail necessary to differentiate the models in 
-        their many facets. I like this suggestion, but was unable to make it 
+\question Page  7-16:  Might  be  more  clear  to  include  a  table  that  
+shows  the  differences  between  the  four Radionuclide  Mass  Balance  
+models;  include  the  inputs,  the  built  in  assumptions,  the  strengths  
+and  the weaknesses.  \begin{solution}
+This is an excellent idea. I sketched a bit of this table idea to see it could 
+        be done clearly, but I'm afraid I came up short. The table quickly 
+        became unweildy, given the detail necessary to differentiate the models 
+        in their many facets. I like this suggestion, but was unable to make it 
         work.
 \end{solution} 
  
-\question Page  8,  Equation  9:  $m_{jk}$  should be defined right below Equation 9 where it is introduced first as opposed 
-to below Equation 10. 
+\question Page  8,  Equation  9:  $m_{jk}$  should be defined right below 
+Equation 9 where it is introduced first as opposed to below Equation 10.  
 \begin{solution}
 Fixed.
 \end{solution} 
  
-\question Page  9, line 148: Would readers of this journal know the Dirichlet boundary condition? Perhaps include a 
-description of it. 
-\begin{solution}
+\question Page  9, line 148: Would readers of this journal know the Dirichlet 
+boundary condition? Perhaps include a description of it.  \begin{solution}
 Good question. It is my understanding that readers of this journal are 
-        engineers who write research software for engineering. After looking at 
-        some examples among previous articles in this journal, I think this is 
-        something that the reader will understand, 
-        particularly since the form of the boundary condition is given in the 
-        figure.
+                engineers who write research software for engineering. After 
+                looking at some examples among previous articles in this 
+                journal, I think this is something that the reader will 
+                understand, particularly since the form of the boundary 
+                condition is given in the figure.
 \end{solution} 
  
-\question Page  9,  line  150-151:  ``is  the  average  concentration throughout the degraded volume'' at which point (j or k), or at the 
-boundary between the two? The wording is a bit confusing.  
-\begin{solution}
+\question Page  9,  line  150-151:  ``is  the  average  concentration 
+throughout the degraded volume'' at which point (j or k), or at the boundary 
+between the two? The wording is a bit confusing.  \begin{solution}
         Good catch. I intended to refer to $C(r_j)$, the concentration at 
         $r_j$, which is the boundary between $j$ \& $k$.
 \end{solution} 
  
-\question Page 9, Figure 6: This figure would be clearer if $V_T$ was shown as full of the various constituent parts. 
-\begin{solution}
-This seemed like a great idea, so I tried it (see below). However, I'm not convinced it 
-	isn't actually more confusing, so I have chosen not to make this
+\question Page 9, Figure 6: This figure would be clearer if $V_T$ was shown as 
+full of the various constituent parts.  \begin{solution}
+This seemed like a great idea, so I tried it (see below). However, I'm not 
+        convinced it isn't actually more confusing, so I have chosen not to 
+        make this
 change. If the reviewer feels strongly that the below image is more clear, I
-can certainly make this change, but I do feel like it may actually add to the confusion.
+can certainly make this change, but I do feel like it may actually add to the 
+        confusion.
 \end{solution} 
 
 
@@ -781,7 +832,8 @@ can certainly make this change, but I do feel like it may actually add to the co
   \end{center}
   \caption[Constituents of a Mixed Cell Control Volume]{The degraded volume is
   modeled as a degraded solid volume, $V_{ds}$, and a degraded fluid volume,
-  $V_{df}$. The intact volume is modeled as an intact solid volume, $V_{is}$, and
+  $V_{df}$. The intact volume is modeled as an intact solid volume, $V_{is}$, 
+        and
   an intact fluid volume $V_{if}$.  Only contaminants in $V_{df}$ are available
   for transport.}
   \label{fig:deg_sorb_volumes}
@@ -795,76 +847,89 @@ The porosity, $\theta$, is defined in the paragraph immediately preceeding this
         set of equations.
 \end{solution} 
  
-\question Page  10,  line  161:  Define  contaminant  masses  and  why  they  are  the  ones  available  to  adjacent  components. 
-\begin{solution}
+\question Page  10,  line  161:  Define  contaminant  masses  and  why  they  
+are  the  ones  available  to  adjacent  components.  \begin{solution}
 Thank you for this comment. I didn't realize how unclear this was. All masses
-are contaminant masses in this context. I have adde d areminder of this to the
+are contaminant masses in this context. I have added a reminder of this to the
 beginning of the section at what was previously line 114.
 \end{solution} 
  
-\question Page  10,  line  165:  The  use  of the word 'available' is not really mathematically based. Because there are so 
-many equations, the mass transfer of the contaminants should be precisely described.  
-\begin{solution}
-Very true. I have replaced this with the more explicit wording, "mass $m_{ij}$
-that can be transferred to the adjacent component in the mass transfer phase."
+\question Page  10,  line  165:  The  use  of the word 'available' is not 
+really mathematically based. Because there are so many equations, the mass 
+transfer of the contaminants should be precisely described.  \begin{solution}
+Very true. I have replaced this with the more explicit wording, ``mass $m_{ij}$
+that can be transferred to the adjacent component in the mass transfer phase.''
 \end{solution} 
  
-\question Page 12, Equations 30 \& 31: It is not clear how the result in 31 was obtained from 30.  
-\begin{solution}
+\question Page 12, Equations 30 \& 31: It is not clear how the result in 31 was 
+obtained from 30.  \begin{solution}
 Great catch. This was based on the definition of $V_{df}$ as a function of
 $V_T$. I have added text to this effect. But, more importantly, as you noted,
 there was an extra d. Thanks for noticing this level of detail. I have double
 checked the source code and you will be pleased (as I was) to know that in the
 implementation, the $V_{df}$ definiton is plugged in directly, so this typo is
-in the paper only and did not appear in the code itself. 
-\end{solution} 
+in the paper only and did not appear in the code itself.  \end{solution} 
  
-\question Page 15, lines 220-27: Similar to the comment on the Dirichlet condition, both the Cauchy and Neumann 
-conditions should be clearly defined. They are used in Figure 8 but not clearly indicated either.  
-\begin{solution}
+\question Page 15, lines 220-27: Similar to the comment on the Dirichlet 
+condition, both the Cauchy and Neumann conditions should be clearly defined. 
+They are used in Figure 8 but not clearly indicated either.  \begin{solution}
 I have called these out by name in equations (40) and (41). Given the
 engineering computation background of the readership, I suspect an elementary
 explanation of Cauchy and Neuman conditions would underestimate the readers.
-I hope that common differential equation boundary conditions of this type are well
+I hope that common differential equation boundary conditions of this type are 
+        well
 understood by engineers, particularly the computationally trained readers of
 this journal.
 \end{solution}
  
-\question Page  16,  Equation  43:  Based  on  experience,  D  and  v  should  be  diffusion coefficient (or dispersion) and 
-advection,  respectively,  although  they  are  not  defined  here.  Would  the  readers  of  this  journal inherently 
-understand  this,  however?  It  is  typically  just  good  form  to  reference  all  the  variables  in  an  equation,  or 
-state that D and v were defined previously in equation (x).  
+\question Page  16,  Equation  43:  Based  on  experience,  D  and  v  should  
+be  diffusion coefficient (or dispersion) and advection,  respectively,  
+although  they  are  not  defined  here.  Would  the  readers  of  this  
+journal inherently understand  this,  however?  It  is  typically  just  good  
+form  to  reference  all  the  variables  in  an  equation,  or state that D 
+and v were defined previously in equation (x).  
 \begin{solution}
-        <++>
+        You are quite correct, I have moved the definitions of D and v to their 
+        first mention. I do believe that the readers of this journal are 
+        engineers and engineers are typically familiar with flow (so advection and diffusion kernels will 
+        be familiar). However you are correct that the explanation needs to be 
+        pointed out in this first mention. I have referenced the discussion of 
+        advection and dispersion (which appears in the following mass transfer 
+        section) from this section in which they first raise their 
+        heads. Thank you for this suggestion.
+        
 \end{solution} 
  
-\question Page  16,  Equation  44:  The  retardation  factor  is  not physically defined. This is an important parameter in 
-radionuclide transport studies.  
-\begin{solution}
+\question Page  16,  Equation  44:  The  retardation  factor  is  not 
+physically defined. This is an important parameter in radionuclide transport 
+studies.  \begin{solution}
 A definition has been added to its first mention, as a function of bulk 
         density.
 \end{solution} 
  
-\question Page 16, line 240: This line is cut off and sentence starting 'The correspon' does not make sense. 
-\begin{solution}
+\question Page 16, line 240: This line is cut off and sentence starting 'The 
+correspon' does not make sense.  \begin{solution}
 This has been fixed, see previous comments to reviewer 1.
 \end{solution} 
  
-\question Page  16,  line  246-49:  If  there  are  results  comparing  the  explicit  and  implicit  modes  of  mass  transfer,  might  be  worth  mentioning  where  they  are  discussed  below.  If  there  are  not  results,  might  be  worth 
-discussing the general success of the implicit mode. 
+\question Page  16,  line  246-49:  If  there  are  results  comparing  the  
+explicit  and  implicit  modes  of  mass  transfer,  might  be  worth  
+mentioning  where  they  are  discussed  below.  If  there  are  not  results,  
+might  be  worth discussing the general success of the implicit mode.  
 \begin{solution}
 Any difference introduced by the explicitness vs. implicitness of the modes is 
         dwarfed by the differences between the models themselves. Nonetheless, 
-        I have added a reference to the much longer dissertation where such 
-        additional results can be found. 
-        {\color{red} *} 
+        in the results section, I have added a reference to the much longer 
+        dissertation where such additional results can be found. 
 \end{solution} 
  
-\question Page  16,  lines  250 \& 251: Advection and dispersion have been mentioned enough to warrant a definition 
-at  its  first  mention  in  the  paper.  It  is  defined  on  page  17,  line  253,  but  discussed numerous times in the 
-paper already.  
+\question Page  16,  lines  250 \& 251: Advection and dispersion have been 
+mentioned enough to warrant a definition at  its  first  mention  in  the  
+paper.  It  is  defined  on  page  17,  line  253,  but  discussed numerous 
+times in the paper already.  
 \begin{solution}
-<++>
+This has been solved on page 16 by referencing this definition at first 
+        mention. 
 \end{solution} 
  
 \question Page 16, line 251: 'equationfor' needs a space inserted.  
@@ -872,62 +937,65 @@ paper already.
 Fixed.
 \end{solution} 
  
-\question Page  20,  Line  299:  Equation (44) is mentioned as an afterthought as to imply that the reader should have 
-known  that  (43)-(44)  was  what  C(z,t)  represents  in  this  section.  Because  there  is  a  lot  of  derivations,  an 
-earlier mention to this in Section 2.3 should be included.  
+\question Page  20,  Line  299:  Equation (44) is mentioned as an afterthought 
+as to imply that the reader should have known  that  (43)-(44)  was  what  
+C(z,t)  represents  in  this  section.  Because  there  is  a  lot  of  
+derivations,  an earlier mention to this in Section 2.3 should be included.  
 \begin{solution}
-        I'm sorry to say that I don't understand this comment. Section 2.3 is after, not 
-        before, (43) - (44). If you mean section 2.2.3, then please note that 
-        each of the four subsections (2.2.1, 2.2.2, 2.2.3, and 2.2.4) seek to 
-        describe \emph{different} models for determining C(z,t). So, in fact, 
-        equation (44) only applies to the model discussed in 2.2.4 and is not 
-        at all related to the model in 2.2.3.
+        I'm sorry to say that I don't understand this comment. Section 2.3 is 
+        after, not before, (43) - (44). If you mean section 2.2.3, then please 
+        note that each of the four subsections (2.2.1, 2.2.2, 2.2.3, and 2.2.4) 
+        seek to describe \emph{different} models for determining C(z,t). So, in 
+        fact, equation (44) only applies to the model discussed in 2.2.4 and is 
+        not at all related to the model in 2.2.3.
 \end{solution} 
  
-\question 
-Page 23, figure 9: Unclear what the CompID values represent, do not know what $F_d$ represents. 
-\begin{solution}
+\question Page 23, figure 9: Unclear what the CompID values represent, do not 
+know what $F_d$ represents.  \begin{solution}
 These two items have now been defined in the captions of all of the figures 
-        that use them. See response to reviewer 1. 
-\end{solution} 
+that use them. See response to reviewer 1.  \end{solution} 
  
 \question Page  23,  figures  10-13:  Unclear  why  the  IsoID  legend  is  
-present  as  the  graphs  only  appear  to  include  $^{238} U$. 
+present  as  the  graphs  only  appear  to  include  $^{238} U$.  
 \begin{solution}
 The graphs include all isotopes listed. It is simply the case that the vast 
-        majority of the material in the example was made of $^{238}U$ isotopes. 
+        majority of the material in the example was made of $^{238}U$ isotopes.  
         So, blue is the predominent color, and all others are dwarfed at the 
         bottom of the plot.
 \end{solution} 
  
-\question Page 24, line 372: 'accross' is spelled wrong 
-\begin{solution}
+\question Page 24, line 372: 'accross' is spelled wrong \begin{solution}
 Fixed.
 \end{solution} 
  
-\question Page  26,  Figure  16:  Both  $^{129}I$  and  $^{79}Se$  exhibit  a  markedly  distinct  behavior  than  the  other  radionuclides 
-and  should  be  explained  as  to  why.  Additionally,  because  only  
-$K_D$ is shown on the graph, but in fact the 
-analysis  is  focused  on  the  retardation  coefficient,  the  relationship  between  the  two  should  be  shown. 
-Additionally,  the  effects  of  the  retardation  factor  and  $K_D$  are dependent on the sorption isotherm that is 
-assumed. This should be included in the discussion.  
+\question Page  26,  Figure  16:  Both  $^{129}I$  and  $^{79}Se$  exhibit  a  
+markedly  distinct  behavior  than  the  other  radionuclides and  should  be  
+explained  as  to  why.  Additionally,  because  only  $K_D$ is shown on the 
+graph, but in fact the analysis  is  focused  on  the  retardation  
+coefficient,  the  relationship  between  the  two  should  be  shown.  
+Additionally,  the  effects  of  the  retardation  factor  and  $K_D$  are 
+dependent on the sorption isotherm that is assumed. This should be included in 
+the discussion.  
 \begin{solution}
-<++>
+This is correct, I have pointed out that the different behavior of these 
+        nuclides is due to their near infinite solubility. Additionally, I have 
+        referenced the relationship between $K_d$ and $R_f$ as well as the 
+        importance of the isotherm assumption.
 \end{solution} 
  
 
-\question 
-Page 28, Figure 18, 19: The text on the graphs is really small and hard to read unless one zooms to 200\%. 
-While  this  isn't  really  that  much  of  an  issue,  it  might  be  prudent  to  enhance  the  graphs  if  possible,  just 
-fyi.  
-\begin{solution}
+\question Page 28, Figure 18, 19: The text on the graphs is really small and 
+hard to read unless one zooms to 200\%.  While  this  isn't  really  that  much  
+of  an  issue,  it  might  be  prudent  to  enhance  the  graphs  if  possible,  
+just fyi.  \begin{solution}
 I have increased the size of Figures 18 and 19.
-        These will be provided separately to the journal in high resolution. 
+        These will be provided separately to the journal in high resolution.  
 \end{solution} 
 
 \section*{Reviewer 4}
 
-\question  Some aspects of material transport are treated somewhat superficially. The
+\question  Some aspects of material transport are treated somewhat 
+superficially. The
 first is that the radionuclide waste material that would be transported by
 groundwater is essentially insoluble uranium dioxide to the surface of which
 fission products are bound by adsorption, which is essentially a weak chemical
@@ -940,9 +1008,24 @@ The Hanford site provides a physical example of contaminated groundwater (from
 the French drains) moving through an adsorbing matrix, and might have been
 cited. In addition, published data of groundwater movement at the proposed
 repository site in Nevada might have been cited.  Some tabulation of Cyder
-results with results from some of the cited models would be illuminating. 
+results with results from some of the cited models would be illuminating.  
 \begin{solution}
-<++>
+Thank you for these suggestions. It is true that some of the models treat 
+        transport very superficially. The software implementation aimed for 
+        speed, rather than high fidelity. I hope that future improvements can 
+        emphasize fidelity without sacrificing speed. Regarding the treatment 
+        of particle suspension as solution rather than solution, you're quite 
+        right that this is a weakness. Your suggestion for including data 
+        retrieved from Handford or Yucca Mountain would be excellent future 
+        feature improvements to this framework. The current implementation made 
+        comparisons with simulations of a homogenous medium, reducing 
+        chemistry, generic clay host rock environment. Given the renewed 
+        interest in Yucca Mountain, verification against high fidelity tuff 
+        models is very desirable.  The comparisons between Cyder 
+        and the cited GDSM model were displayed as plots, rather than tables, 
+        due to the sheer size of the tables that would be needed. Importantly, 
+        the raw data for the Cyder results can be retrieved in its open source 
+        repository. Thank you so much ffor these suggestions. 
 \end{solution}
 
 \end{questions}
